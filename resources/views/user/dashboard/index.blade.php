@@ -14,16 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
    <!-- font -->
-   <link rel="stylesheet" href="fonts/fonts.css">
-   <link rel="stylesheet" href="fonts/font-icons.css">
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-   <link rel="stylesheet" href="css/swiper-bundle.min.css">
-   <link rel="stylesheet" href="css/animate.css">
+   <link rel="stylesheet" href="{{asset('frontend')}}/fonts/fonts.css">
+   <link rel="stylesheet" href="{{asset('frontend')}}/fonts/font-icons.css">
+   <link rel="stylesheet" href="{{asset('frontend')}}/css/bootstrap.min.css">
+   <link rel="stylesheet" href="{{asset('frontend')}}/css/swiper-bundle.min.css">
+   <link rel="stylesheet" href="{{asset('frontend')}}/css/animate.css">
    <link rel="stylesheet"type="text/css" href="css/styles.css"/>
 
     <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="images/logo/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="images/logo/favicon.png">
+    <link rel="shortcut icon" href="{{asset('frontend')}}/images/logo/favicon.png">
+<link rel="apple-touch-icon-precomposed" href="{{asset('frontend')}}/images/logo/favicon.png">
 
 </head>
 
@@ -37,22 +37,22 @@
     <!-- /preload -->
     <div id="wrapper">
         <!-- Top Bar -->
-        @include('user.top_bar')
+        @include('user.dashboard.rest.top_bar')
         <!-- /Top Bar -->
         <!-- Header -->
-        @incude('user.header')
+        @include('user.dashboard.rest.header')
         <!-- /Header -->
         <!-- Slider -->
-        @include('user.slider')
+        @include('user.dashboard.rest.slider')
         <!-- /Slider -->
         <!-- Marquee -->
-        @include('user.marquee')
+        @include('user.dashboard.rest.marquee')
         <!-- /Marquee -->
         <!-- Categories -->
-        @inlcude('user.categories')
+        @inlcude('user.dashboard.rest.categories')
         <!-- /Categories -->
         <!-- Seller - Note: where the cards of products are displayed-->
-        @include('user.seller')
+        @include('user.dashboard.rest.seller')
         <!-- /Seller -->
         <!-- Lookbook -->
         <section class="flat-spacing-6">
@@ -65,7 +65,7 @@
                     <div class="swiper-slide" lazy="true">
                         <div class="wrap-lookbook lookbook-1">
                             <div class="image">
-                                <img class="lazyload" data-src="images/shop/file/lookbook-3.jpg" src="images/shop/file/lookbook-3.jpg" alt="image-lookbook">
+                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/file/lookbook-3.jpg" src="{{asset('frontend')}}/images/shop/file/lookbook-3.jpg" alt="image-lookbook">
                             </div>
                             <div class="lookbook-item item-1">
                                 <div class="inner">
@@ -77,7 +77,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="images/shop/products/img-p2.png" src="images/shop/products/img-p2.png" alt="lookbook-item">
+                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p2.png" src="{{asset('frontend')}}/images/shop/products/img-p2.png" alt="lookbook-item">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -102,7 +102,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="images/shop/products/img-p4.png" src="images/shop/products/img-p4.png" alt="">
+                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p4.png" src="{{asset('frontend')}}/images/shop/products/img-p4.png" alt="">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -122,7 +122,7 @@
                     <div class="swiper-slide" lazy="true">
                         <div class="wrap-lookbook lookbook-2">
                             <div class="image">
-                                <img class="lazyload" data-src="images/shop/file/lookbook-4.jpg" src="images/shop/file/lookbook-4.jpg" alt="image-lookbook">
+                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/file/lookbook-4.jpg" src="{{asset('frontend')}}/images/shop/file/lookbook-4.jpg" alt="image-lookbook">
                             </div>
                             <div class="lookbook-item item-1">
                                 <div class="inner">
@@ -134,7 +134,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="images/shop/products/img-p5.png" src="images/shop/products/img-p5.png" alt="">
+                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p5.png" src="{{asset('frontend')}}/images/shop/products/img-p5.png" alt="">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -161,7 +161,7 @@
         </section>
         <!-- /Lookbook -->
         <!-- Testimonial -->
-        @include('user.testimonial')
+        @include('user.dashboard.rest.testimonial')
         <!-- /Testimonial -->
         <!-- brand -->
          <section class="flat-spacing-5 pt_0">
@@ -170,32 +170,32 @@
                     <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-01.png" src="images/brand/brand-01.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-01.png" src="{{asset('frontend')}}/images/brand/brand-01.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-02.png" src="images/brand/brand-02.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-02.png" src="{{asset('frontend')}}/images/brand/brand-02.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-03.png" src="images/brand/brand-03.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-03.png" src="{{asset('frontend')}}/images/brand/brand-03.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-04.png" src="images/brand/brand-04.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-04.png" src="{{asset('frontend')}}/images/brand/brand-04.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-05.png" src="images/brand/brand-05.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-05.png" src="{{asset('frontend')}}/images/brand/brand-05.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="images/brand/brand-06.png" src="images/brand/brand-06.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-06.png" src="{{asset('frontend')}}/images/brand/brand-06.png" alt="image-brand">
                                 </div>
                             </div>
                     </div>
@@ -217,7 +217,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="images/shop/gallery/gallery-7.jpg" src="images/shop/gallery/gallery-7.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-7.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-7.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -225,7 +225,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".3s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="images/shop/gallery/gallery-3.jpg" src="images/shop/gallery/gallery-3.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-3.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-3.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -233,7 +233,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".4s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="images/shop/gallery/gallery-5.jpg" src="images/shop/gallery/gallery-5.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-5.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-5.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -241,7 +241,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".5s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="images/shop/gallery/gallery-8.jpg" src="images/shop/gallery/gallery-8.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-8.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-8.jpg" alt="image-gallery">
                                     </div>
                                     <a href="product-detail.html" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">View product</span></a>
                                 </div>
@@ -249,7 +249,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".6s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="images/shop/gallery/gallery-6.jpg" src="images/shop/gallery/gallery-6.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-6.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-6.jpg" alt="image-gallery">
                                     </div>
                                     <a href="product-detail.html" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">View product</span></a>
                                 </div>
@@ -320,7 +320,7 @@
         </section>
         <!-- /Icon box -->
         <!-- Footer -->
-        @include('user.footer')
+        @include('user.dashboard.rest.footer')
         <!-- /Footer -->
         
     </div>
@@ -334,15 +334,15 @@
     <!-- /gotop -->
     
     <!-- toolbar-bottom -->
-    @include('user.toolbar.bottom')
+    @include('user.dashboard.toolbar.bottom')
     <!-- /toolbar-bottom -->
 
     <!-- modalDemo -->
-    @include('user.modal.demo')
+    @include('user.dashboard.modal.demo')
     <!-- /modalDemo -->    
 
     <!-- mobile menu -->
-    @include('user.mobile_menu')
+    @include('user.dashboard.rest.mobile_menu')
     <!-- /mobile menu -->
 
 
@@ -392,7 +392,7 @@
                                 <div class="tf-loop-item">
                                     <div class="image">
                                         <a href="product-detail.html">
-                                            <img src="images/products/white-3.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/products/white-3.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="content">
@@ -406,7 +406,7 @@
                                 <div class="tf-loop-item">
                                     <div class="image">
                                         <a href="product-detail.html">
-                                            <img src="images/products/white-2.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/products/white-2.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="content">
@@ -419,7 +419,7 @@
                                 <div class="tf-loop-item">
                                     <div class="image">
                                         <a href="product-detail.html">
-                                            <img src="images/products/white-1.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/products/white-1.jpg" alt="">
                                         </a>
                                     </div>
                                     <div class="content">
@@ -439,31 +439,31 @@
     <!-- /canvasSearch -->
 
     <!-- toolbarShopmb -->
-    @include('user.toolbar.shopmb')
+    @include('user.dashboard.toolbar.shopmb')
     <!-- /toolbarShopmb -->
 
     <!-- modal login -->
-    @include('user.modal.login')
+    @include('user.dashboard.modal.login')
     <!-- /modal login -->
 
     <!-- shoppingCart -->
-    @include('user.shopping_cart')
+    @include('user.dashboard.rest.shopping_cart')
     <!-- /shoppingCart -->
 
     <!-- modal compare -->
-    @include('user.modal.compare')
+    @include('user.dashboard.modal.compare')
     <!-- /modal compare -->
     
     <!-- modal quick_add -->
-    @include(user.modal.quick_add)
+    @include('user.dashboard.modal.quick_add')
     <!-- /modal quick_add -->
 
     <!-- modal quick_view -->
-    @include(user.modal.quick_view)
+    @include('user.dashboard.modal.quick_view')
     <!-- /modal quick_view -->
 
     <!-- modal find_size -->
-    @include(user.modal.find_size)
+    @include('user.dashboard.modal.find_size')
     <!-- /modal find_size -->
 
     <!-- auto popup  -->
@@ -471,7 +471,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-top">
-                    <img class="lazyload" data-src="images/item/banner-newleter.jpg" src="images/item/banner-newleter.jpg" alt="home-01">
+                    <img class="lazyload" data-src="{{asset('frontend')}}/images/item/banner-newleter.jpg" src="{{asset('frontend')}}/images/item/banner-newleter.jpg" alt="home-01">
                     <span class="icon icon-close btn-hide-popup" data-bs-dismiss="modal"></span>
                 </div>
                 <div class="modal-bottom">
@@ -495,16 +495,16 @@
 
 
     <!-- Javascript -->
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="js/carousel.js"></script>
-    <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="js/lazysize.min.js"></script>
-    <script type="text/javascript" src="js/count-down.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/carousel.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/lazysize.min.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/count-down.js"></script>
     <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="js/multiple-modal.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/multiple-modal.js"></script>
+    <script type="text/javascript" src="{{asset('frontend')}}/js/main.js"></script>
 </body>
 
 

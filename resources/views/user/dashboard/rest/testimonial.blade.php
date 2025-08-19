@@ -27,7 +27,7 @@
                                     <div class="product">
                                         <div class="image">
                                             <a href="product-detail.html">
-                                                <img class="lazyload" data-src="images/shop/products/img-p2.png" src="images/shop/products/img-p2.png" alt="">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p2.png" src="{{asset('frontend')}}/images/shop/products/img-p2.png" alt="">
                                             </a>
                                         </div>
                                         <div class="content-wrap">
@@ -60,7 +60,7 @@
                                     <div class="product">
                                         <div class="image">
                                             <a href="product-detail.html">
-                                                <img class="lazyload" data-src="images/shop/products/img-p3.png" src="images/shop/products/img-p3.png" alt="">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p3.png" src="{{asset('frontend')}}/images/shop/products/img-p3.png" alt="">
                                             </a>
                                         </div>
                                         <div class="content-wrap">
@@ -93,7 +93,7 @@
                                     <div class="product">
                                         <div class="image">
                                             <a href="product-detail.html">
-                                                <img class="lazyload" data-src="images/shop/products/img-p4.png" src="images/shop/products/img-p4.png" alt="">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p4.png" src="{{asset('frontend')}}/images/shop/products/img-p4.png" alt="">
                                             </a>
                                         </div>
                                         <div class="content-wrap">
@@ -126,7 +126,7 @@
                                     <div class="product">
                                         <div class="image">
                                             <a href="product-detail.html">
-                                                <img class="lazyload" data-src="images/shop/products/img-p5.png" src="images/shop/products/img-p5.png" alt="">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p5.png" src="{{asset('frontend')}}/images/shop/products/img-p5.png" alt="">
                                             </a>
                                         </div>
                                         <div class="content-wrap">

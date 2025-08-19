@@ -7,7 +7,7 @@
                 <div class="wrap">
                     <div class="tf-product-info-item">
                         <div class="image">
-                            <img src="images/products/orange-1.jpg" alt="">
+                            <img src="{{asset('frontend')}}/images/products/orange-1.jpg" alt="">
                         </div>
                         <div class="content">
                             <a href="product-detail.html">Ribbed Tank Top</a>
@@ -86,7 +86,7 @@
                                 <span class="icon icon-check"></span>
                             </a>
                             <div class="w-100">
-                                <a href="#" class="btns-full">Buy with <img src="images/payments/paypal.png" alt=""></a>
+                                <a href="#" class="btns-full">Buy with <img src="{{asset('frontend')}}/images/payments/paypal.png" alt=""></a>
                                 <a href="#" class="payment-more-option">More payment options</a>
                             </div>
                         </form>

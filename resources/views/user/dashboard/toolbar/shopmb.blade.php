@@ -6,7 +6,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate1.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate1.jpg" alt="">
                             </div>
                             <span>Accessories</span>
                         </a>
@@ -14,7 +14,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate2.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate2.jpg" alt="">
                             </div>
                             <span>Dog</span>
                         </a>
@@ -22,7 +22,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate3.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate3.jpg" alt="">
                             </div>
                             <span>Grocery</span>
                         </a>
@@ -30,7 +30,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate4.png" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate4.png" alt="">
                             </div>
                             <span>Handbag</span>
                         </a>
@@ -38,7 +38,7 @@
                     <li class="nav-mb-item">
                         <a href="#cate-menu-one" class="tf-category-link has-children collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="cate-menu-one">
                             <div class="image">
-                                <img src="images/shop/cate/cate5.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate5.jpg" alt="">
                             </div>
                             <span>Fashion</span>
                             <span class="btn-open-sub"></span>
@@ -48,7 +48,7 @@
                                 <li>
                                     <a href="#cate-shop-one" class="tf-category-link has-children sub-nav-link collapsed"  data-bs-toggle="collapse" aria-expanded="true" aria-controls="cate-shop-one">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate6.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate6.jpg" alt="">
                                         </div>
                                         <span>Mens</span>
                                         <span class="btn-open-sub"></span>
@@ -58,7 +58,7 @@
                                             <li>
                                                 <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                                     <div class="image">
-                                                        <img src="images/shop/cate/cate1.jpg" alt="">
+                                                        <img src="{{asset('frontend')}}/images/shop/cate/cate1.jpg" alt="">
                                                     </div>
                                                     <span>Accessories</span>
                                                 </a>
@@ -66,7 +66,7 @@
                                             <li>
                                                 <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                                     <div class="image">
-                                                        <img src="images/shop/cate/cate8.jpg" alt="">
+                                                        <img src="{{asset('frontend')}}/images/shop/cate/cate8.jpg" alt="">
                                                     </div>
                                                     <span>Shoes</span>
                                                 </a>
@@ -77,7 +77,7 @@
                                 <li>
                                     <a href="#cate-shop-two" class="tf-category-link has-children sub-nav-link collapsed"  data-bs-toggle="collapse" aria-expanded="true" aria-controls="cate-shop-two">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate9.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate9.jpg" alt="">
                                         </div>
                                         <span>Womens</span>
                                         <span class="btn-open-sub"></span>
@@ -87,7 +87,7 @@
                                             <li>
                                                 <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                                     <div class="image">
-                                                        <img src="images/shop/cate/cate4.png" alt="">
+                                                        <img src="{{asset('frontend')}}/images/shop/cate/cate4.png" alt="">
                                                     </div>
                                                     <span>Handbag</span>
                                                 </a>
@@ -95,7 +95,7 @@
                                             <li>
                                                 <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                                     <div class="image">
-                                                        <img src="images/shop/cate/cate7.jpg" alt="">
+                                                        <img src="{{asset('frontend')}}/images/shop/cate/cate7.jpg" alt="">
                                                     </div>
                                                     <span>Tee</span>
                                                 </a>
@@ -109,7 +109,7 @@
                     <li class="nav-mb-item">
                         <a href="#cate-menu-two" class="tf-category-link has-children collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="cate-menu-two">
                             <div class="image">
-                                <img src="images/shop/cate/cate6.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate6.jpg" alt="">
                             </div>
                             <span>Men</span>
                             <span class="btn-open-sub"></span>
@@ -119,7 +119,7 @@
                                 <li>
                                     <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate1.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate1.jpg" alt="">
                                         </div>
                                         <span>Accessories</span>
                                     </a>
@@ -127,7 +127,7 @@
                                 <li>
                                     <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate8.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate8.jpg" alt="">
                                         </div>
                                         <span>Shoes</span>
                                     </a>
@@ -138,7 +138,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate7.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate7.jpg" alt="">
                             </div>
                             <span>Tee</span>
                         </a>
@@ -146,7 +146,7 @@
                     <li class="nav-mb-item">
                         <a href="shop-default.html" class="tf-category-link mb-menu-link">
                             <div class="image">
-                                <img src="images/shop/cate/cate8.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate8.jpg" alt="">
                             </div>
                             <span>Shoes</span>
                         </a>
@@ -154,7 +154,7 @@
                     <li class="nav-mb-item">
                         <a href="#cate-menu-three" class="tf-category-link has-children collapsed mb-menu-link" data-bs-toggle="collapse" aria-expanded="true" aria-controls="cate-menu-three">
                             <div class="image">
-                                <img src="images/shop/cate/cate9.jpg" alt="">
+                                <img src="{{asset('frontend')}}/images/shop/cate/cate9.jpg" alt="">
                             </div>
                             <span>Women</span>
                             <span class="btn-open-sub"></span>
@@ -164,7 +164,7 @@
                                 <li>
                                     <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate4.png" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate4.png" alt="">
                                         </div>
                                         <span>Handbag</span>
                                     </a>
@@ -172,7 +172,7 @@
                                 <li>
                                     <a href="shop-default.html" class="tf-category-link sub-nav-link">
                                         <div class="image">
-                                            <img src="images/shop/cate/cate7.jpg" alt="">
+                                            <img src="{{asset('frontend')}}/images/shop/cate/cate7.jpg" alt="">
                                         </div>
                                         <span>Tee</span>
                                     </a>
