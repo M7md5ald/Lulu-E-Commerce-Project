@@ -1,7 +1,7 @@
 <aside class="sidebar-wrapper">
     <div class="sidebar-header">
       <div class="logo-icon">
-        <img src="{{asset('backend')}}/assets/images/logo-icon.png" class="logo-img" alt="">
+        <img src="assets/images/logo-icon.png" class="logo-img" alt="">
       </div>
       <div class="logo-name flex-grow-1">
         <h5 class="mb-0">Metoxi</h5>
@@ -357,24 +357,24 @@
           </a>
         </div>
         <div class="dropdown dropup-center dropup dropdown-laungauge">
-          <a class="dropdown-toggle dropdown-toggle-nocaret footer-icon" href="avascript:;" data-bs-toggle="dropdown"><img src="{{asset('backend')}}/assets/images/county/02.png" width="22" alt="">
+          <a class="dropdown-toggle dropdown-toggle-nocaret footer-icon" href="avascript:;" data-bs-toggle="dropdown"><img src="assets/images/county/02.png" width="22" alt="">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/01.png" width="20" alt=""><span class="ms-2">English</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/01.png" width="20" alt=""><span class="ms-2">English</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/02.png" width="20" alt=""><span class="ms-2">Catalan</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/02.png" width="20" alt=""><span class="ms-2">Catalan</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/03.png" width="20" alt=""><span class="ms-2">French</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/03.png" width="20" alt=""><span class="ms-2">French</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/04.png" width="20" alt=""><span class="ms-2">Belize</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/04.png" width="20" alt=""><span class="ms-2">Belize</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/05.png" width="20" alt=""><span class="ms-2">Colombia</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/05.png" width="20" alt=""><span class="ms-2">Colombia</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/06.png" width="20" alt=""><span class="ms-2">Spanish</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/06.png" width="20" alt=""><span class="ms-2">Spanish</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/07.png" width="20" alt=""><span class="ms-2">Georgian</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/07.png" width="20" alt=""><span class="ms-2">Georgian</span></a>
             </li>
-            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="{{asset('backend')}}/assets/images/county/08.png" width="20" alt=""><span class="ms-2">Hindi</span></a>
+            <li><a class="dropdown-item d-flex align-items-center py-2" href="javascript:;"><img src="assets/images/county/08.png" width="20" alt=""><span class="ms-2">Hindi</span></a>
             </li>
           </ul>
         </div>
