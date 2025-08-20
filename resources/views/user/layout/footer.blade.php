@@ -7,7 +7,7 @@
                                 <div class="footer-infor">
                                     <div class="footer-logo">
                                         <a href="index.html">
-                                            <img src="{{asset('frontend')}}/images/logo/logo.svg" alt="">
+                                            <img src="{{assets('frontend')}}/images/logo/logo.svg" alt="">
                                         </a>
                                     </div>
                                     <ul>
@@ -108,10 +108,10 @@
                                         <div class="tf-cur">
                                             <div class="tf-currencies">
                                                 <select class="image-select center style-default type-currencies">
-                                                    <option data-thumbnail="{{asset('frontend')}}/images/country/fr.svg">EUR <span>€ | France</span></option>
-                                                    <option data-thumbnail="{{asset('frontend')}}/images/country/de.svg">EUR <span>€ | Germany</span></option>
-                                                    <option selected data-thumbnail="{{asset('frontend')}}/images/country/us.svg">USD <span>$ | United States</span></option>
-                                                    <option data-thumbnail="{{asset('frontend')}}/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
+                                                    <option data-thumbnail="{{s}}/images/country/fr.svg">EUR <span>€ | France</span></option>
+                                                    <option data-thumbnail="{{s}}/images/country/de.svg">EUR <span>€ | Germany</span></option>
+                                                    <option selected data-thumbnail="{{s}}/images/country/us.svg">USD <span>$ | United States</span></option>
+                                                    <option data-thumbnail="{{s}}/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
                                                 </select>
                                             </div>
                                             <div class="tf-languages">
@@ -136,11 +136,11 @@
                                 <div class="footer-bottom-wrap d-flex gap-20 flex-wrap justify-content-between align-items-center">
                                     <div class="footer-menu_item">© 2024 Ecomus Store. All Rights Reserved</div>
                                     <div class="tf-payment">
-                                        <img src="{{asset('frontend')}}/images/payments/visa.png" alt="">
-                                        <img src="{{asset('frontend')}}/images/payments/img-1.png" alt="">
-                                        <img src="{{asset('frontend')}}/images/payments/img-2.png" alt="">
-                                        <img src="{{asset('frontend')}}/images/payments/img-3.png" alt="">
-                                        <img src="{{asset('frontend')}}/images/payments/img-4.png" alt="">
+                                        <img src="{{s}}/images/payments/visa.png" alt="">
+                                        <img src="{{s}}/images/payments/img-1.png" alt="">
+                                        <img src="{{s}}/images/payments/img-2.png" alt="">
+                                        <img src="{{s}}/images/payments/img-3.png" alt="">
+                                        <img src="{{s}}/images/payments/img-4.png" alt="">
                                     </div>
                                 </div>
                             </div>

@@ -32,17 +32,17 @@
 <body>
 
   <!--start header-->
-  @include('admin.header')
+  @include('admin.layout.header')
   <!--end top header-->
 
 
   <!--start sidebar-->
-  @include('admin.sidebar')
+  @include('admin.layout.sidebar')
   <!--end sidebar-->
 
 
   <!--start main wrapper-->
-  @include('admin.main_wrapper')
+  @yield('content')
   <!--end main wrapper-->
 
   <!--start overlay-->
@@ -50,17 +50,15 @@
   <!--end overlay-->
 
  <!--start footer-->
- <footer class="page-footer">
-  <p class="mb-0">Copyright © 2023. All right reserved.</p>
-</footer>
-<!--top footer-->
+  @include('admin.layout.footer')
+ <!--top footer-->
 
   <!--start cart-->
-  @include('admin.cart')
+  @include('admin.layout.cart')
   <!--end cart-->
 
   <!--start switcher-->
-  @include('admin.switcher')
+  @include('admin.layout.switcher')
   <!--start switcher-->
 
 

@@ -1,54 +1,7 @@
+@extends('user.layout.index')
+@section('content')
 
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
-
-
-<!-- Mirrored from themesflat.co/html/ecomus/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2024 08:49:54 GMT -->
-<head>
-    <meta charset="utf-8">
-    <title>Ecomus - Ultimate HTML</title>
-
-    <meta name="author" content="themesflat.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-   <!-- font -->
-   <link rel="stylesheet" href="{{asset('frontend')}}/fonts/fonts.css">
-   <link rel="stylesheet" href="{{asset('frontend')}}/fonts/font-icons.css">
-   <link rel="stylesheet" href="{{asset('frontend')}}/css/bootstrap.min.css">
-   <link rel="stylesheet" href="{{asset('frontend')}}/css/swiper-bundle.min.css">
-   <link rel="stylesheet" href="{{asset('frontend')}}/css/animate.css">
-   <link rel="stylesheet"type="text/css" href="css/styles.css"/>
-
-    <!-- Favicon and Touch Icons  -->
-    <link rel="shortcut icon" href="{{asset('frontend')}}/images/logo/favicon.png">
-<link rel="apple-touch-icon-precomposed" href="{{asset('frontend')}}/images/logo/favicon.png">
-
-</head>
-
-<body class="preload-wrapper popup-loader">
-    <!-- preload -->
-    <div class="preload preload-container">
-        <div class="preload-logo">
-            <div class="spinner"></div>
-        </div>
-    </div>
-    <!-- /preload -->
-    <div id="wrapper">
-        <!-- Top Bar -->
-        @include('user.dashboard.rest.top_bar')
-        <!-- /Top Bar -->
-        <!-- Header -->
-        @include('user.dashboard.rest.header')
-        <!-- /Header -->
-        <!-- Slider -->
-        @include('user.dashboard.rest.slider')
-        <!-- /Slider -->
-        <!-- Marquee -->
-        @include('user.dashboard.rest.marquee')
-        <!-- /Marquee -->
-        <!-- Categories -->
+<!-- Categories -->
         @inlcude('user.dashboard.rest.categories')
         <!-- /Categories -->
         <!-- Seller - Note: where the cards of products are displayed-->
@@ -65,7 +18,7 @@
                     <div class="swiper-slide" lazy="true">
                         <div class="wrap-lookbook lookbook-1">
                             <div class="image">
-                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/file/lookbook-3.jpg" src="{{asset('frontend')}}/images/shop/file/lookbook-3.jpg" alt="image-lookbook">
+                                <img class="lazyload" data-src="{{assets('frontend')}}/images/shop/file/lookbook-3.jpg" src="{{assets('frontend')}}/images/shop/file/lookbook-3.jpg" alt="image-lookbook">
                             </div>
                             <div class="lookbook-item item-1">
                                 <div class="inner">
@@ -77,7 +30,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p2.png" src="{{asset('frontend')}}/images/shop/products/img-p2.png" alt="lookbook-item">
+                                                        <img class="lazyload" data-src="{{assets('frontend')}}/images/shop/products/img-p2.png" src="{{assets('frontend')}}/images/shop/products/img-p2.png" alt="lookbook-item">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -102,7 +55,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p4.png" src="{{asset('frontend')}}/images/shop/products/img-p4.png" alt="">
+                                                        <img class="lazyload" data-src="{{assets('frontend')}}/images/shop/products/img-p4.png" src="{{assets('frontend')}}/images/shop/products/img-p4.png" alt="">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -122,7 +75,7 @@
                     <div class="swiper-slide" lazy="true">
                         <div class="wrap-lookbook lookbook-2">
                             <div class="image">
-                                <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/file/lookbook-4.jpg" src="{{asset('frontend')}}/images/shop/file/lookbook-4.jpg" alt="image-lookbook">
+                                <img class="lazyload" data-src="{{assets('frontend')}}/images/shop/file/lookbook-4.jpg" src="{{assets('frontend')}}/images/shop/file/lookbook-4.jpg" alt="image-lookbook">
                             </div>
                             <div class="lookbook-item item-1">
                                 <div class="inner">
@@ -134,7 +87,7 @@
                                             <li>
                                                 <div class="lookbook-product">
                                                     <a href="product-detail.html" class="image">
-                                                        <img class="lazyload" data-src="{{asset('frontend')}}/images/shop/products/img-p5.png" src="{{asset('frontend')}}/images/shop/products/img-p5.png" alt="">
+                                                        <img class="lazyload" data-src="{{assets('frontend')}}/images/shop/products/img-p5.png" src="{{assets('frontend')}}/images/shop/products/img-p5.png" alt="">
                                                     </a>
                                                     <div class="content-wrap">
                                                         <div class="product-title">
@@ -170,32 +123,32 @@
                     <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-01.png" src="{{asset('frontend')}}/images/brand/brand-01.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-01.png" src="{{assets('frontend')}}/images/brand/brand-01.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-02.png" src="{{asset('frontend')}}/images/brand/brand-02.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-02.png" src="{{assets('frontend')}}/images/brand/brand-02.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-03.png" src="{{asset('frontend')}}/images/brand/brand-03.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-03.png" src="{{assets('frontend')}}/images/brand/brand-03.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-04.png" src="{{asset('frontend')}}/images/brand/brand-04.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-04.png" src="{{assets('frontend')}}/images/brand/brand-04.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-05.png" src="{{asset('frontend')}}/images/brand/brand-05.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-05.png" src="{{assets('frontend')}}/images/brand/brand-05.png" alt="image-brand">
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="brand-item">
-                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/brand/brand-06.png" src="{{asset('frontend')}}/images/brand/brand-06.png" alt="image-brand">
+                                    <img class="lazyload" data-src="{{assets('frontend')}}/images/brand/brand-06.png" src="{{assets('frontend')}}/images/brand/brand-06.png" alt="image-brand">
                                 </div>
                             </div>
                     </div>
@@ -217,7 +170,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".2s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-7.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-7.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{assets('frontend')}}/images/shop/gallery/gallery-7.jpg" src="{{assets('frontend')}}/images/shop/gallery/gallery-7.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -225,7 +178,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".3s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-3.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-3.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{assets('frontend')}}/images/shop/gallery/gallery-3.jpg" src="{{assets('frontend')}}/images/shop/gallery/gallery-3.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -233,7 +186,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".4s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-5.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-5.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{assets('frontend')}}/images/shop/gallery/gallery-5.jpg" src="{{assets('frontend')}}/images/shop/gallery/gallery-5.jpg" alt="image-gallery">
                                     </div>
                                     <a href="#quick_add" data-bs-toggle="modal" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">Quick Add</span></a>
                                 </div>
@@ -241,7 +194,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".5s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-8.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-8.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{assets('frontend')}}/images/shop/gallery/gallery-8.jpg" src="{{assets('frontend')}}/images/shop/gallery/gallery-8.jpg" alt="image-gallery">
                                     </div>
                                     <a href="product-detail.html" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">View product</span></a>
                                 </div>
@@ -249,7 +202,7 @@
                             <div class="swiper-slide">
                                 <div class="gallery-item hover-img wow fadeInUp" data-wow-delay=".6s">
                                     <div class="img-style">
-                                        <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/shop/gallery/gallery-6.jpg" src="{{asset('frontend')}}/images/shop/gallery/gallery-6.jpg" alt="image-gallery">
+                                        <img class="lazyload img-hover" data-src="{{assets('frontend')}}/images/shop/gallery/gallery-6.jpg" src="{{assets('frontend')}}/images/shop/gallery/gallery-6.jpg" alt="image-gallery">
                                     </div>
                                     <a href="product-detail.html" class="box-icon"><span class="icon icon-bag"></span> <span class="tooltip">View product</span></a>
                                 </div>
@@ -319,194 +272,5 @@
             </div>
         </section>
         <!-- /Icon box -->
-        <!-- Footer -->
-        @include('user.dashboard.rest.footer')
-        <!-- /Footer -->
-        
-    </div>
-    
-    <!-- gotop -->
-    <div class="progress-wrap">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 286.138;"></path>
-        </svg>
-    </div>
-    <!-- /gotop -->
-    
-    <!-- toolbar-bottom -->
-    @include('user.dashboard.toolbar.bottom')
-    <!-- /toolbar-bottom -->
 
-    <!-- modalDemo -->
-    @include('user.dashboard.modal.demo')
-    <!-- /modalDemo -->    
-
-    <!-- mobile menu -->
-    @include('user.dashboard.rest.mobile_menu')
-    <!-- /mobile menu -->
-
-
-
-    <!-- canvasSearch -->
-    <div class="offcanvas offcanvas-end canvas-search" id="canvasSearch">
-        <div class="canvas-wrapper">
-            <header class="tf-search-head">
-                <div class="title fw-5">
-                    Search our site
-                    <div class="close">
-                        <span class="icon-close icon-close-popup" data-bs-dismiss="offcanvas" aria-label="Close"></span>
-                    </div>
-                </div>
-                <div class="tf-search-sticky">
-                    <form class="tf-mini-search-frm">
-                        <fieldset class="text">
-                            <input type="text" placeholder="Search" class="" name="text" tabindex="0" value="" aria-required="true" required="">
-                        </fieldset>
-                        <button class="" type="submit"><i class="icon-search"></i></button>
-                    </form>
-                </div>
-            </header>
-            <div class="canvas-body p-0">
-                <div class="tf-search-content">
-                    <div class="tf-cart-hide-has-results">
-                        <div class="tf-col-quicklink">
-                            <div class="tf-search-content-title fw-5">Quick link</div>
-                            <ul class="tf-quicklink-list">
-                                <li class="tf-quicklink-item">
-                                    <a href="shop-default.html" class="">Fashion</a>
-                                </li>
-                                <li class="tf-quicklink-item">
-                                    <a href="shop-default.html" class="">Men</a>
-                                </li>
-                                <li class="tf-quicklink-item">
-                                    <a href="shop-default.html" class="">Women</a>
-                                </li>
-                                <li class="tf-quicklink-item">
-                                    <a href="shop-default.html" class="">Accessories</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tf-col-content">
-                            <div class="tf-search-content-title fw-5">Need some inspiration?</div>
-                            <div class="tf-search-hidden-inner">
-                                <div class="tf-loop-item">
-                                    <div class="image">
-                                        <a href="product-detail.html">
-                                            <img src="{{asset('frontend')}}/images/products/white-3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <a href="product-detail.html">Cotton jersey top</a>
-                                        <div class="tf-product-info-price">
-                                            <div class="compare-at-price">$10.00</div>
-                                            <div class="price-on-sale fw-6">$8.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tf-loop-item">
-                                    <div class="image">
-                                        <a href="product-detail.html">
-                                            <img src="{{asset('frontend')}}/images/products/white-2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <a href="product-detail.html">Mini crossbody bag</a>
-                                        <div class="tf-product-info-price">
-                                            <div class="price fw-6">$18.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tf-loop-item">
-                                    <div class="image">
-                                        <a href="product-detail.html">
-                                            <img src="{{asset('frontend')}}/images/products/white-1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="content">
-                                        <a href="product-detail.html">Oversized Printed T-shirt</a>
-                                        <div class="tf-product-info-price">
-                                            <div class="price fw-6">$18.00</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /canvasSearch -->
-
-    <!-- toolbarShopmb -->
-    @include('user.dashboard.toolbar.shopmb')
-    <!-- /toolbarShopmb -->
-
-    <!-- modal login -->
-    @include('user.dashboard.modal.login')
-    <!-- /modal login -->
-
-    <!-- shoppingCart -->
-    @include('user.dashboard.rest.shopping_cart')
-    <!-- /shoppingCart -->
-
-    <!-- modal compare -->
-    @include('user.dashboard.modal.compare')
-    <!-- /modal compare -->
-    
-    <!-- modal quick_add -->
-    @include('user.dashboard.modal.quick_add')
-    <!-- /modal quick_add -->
-
-    <!-- modal quick_view -->
-    @include('user.dashboard.modal.quick_view')
-    <!-- /modal quick_view -->
-
-    <!-- modal find_size -->
-    @include('user.dashboard.modal.find_size')
-    <!-- /modal find_size -->
-
-    <!-- auto popup  -->
-    <div class="modal modalCentered fade auto-popup modal-newleter">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-top">
-                    <img class="lazyload" data-src="{{asset('frontend')}}/images/item/banner-newleter.jpg" src="{{asset('frontend')}}/images/item/banner-newleter.jpg" alt="home-01">
-                    <span class="icon icon-close btn-hide-popup" data-bs-dismiss="modal"></span>
-                </div>
-                <div class="modal-bottom">
-                    <h4 class="text-center">Don’t mis out</h4>
-                    <h6 class="text-center">Be the first one to get the new product at early bird prices.</h6>
-                    <form id="subscribe-form" action="#" class="form-newsletter" method="post" accept-charset="utf-8" data-mailchimp="true">
-                        <div id="subscribe-content">
-                            <input type="email" name="email-form" id="subscribe-email" placeholder="Email *">
-                            <button type="button" id="subscribe-button" class="tf-btn btn-fill radius-3 animate-hover-btn w-100 justify-content-center">Keep me updated</button>
-                        </div>
-                        <div id="subscribe-msg"></div>
-                    </form>
-                    <div class="text-center">
-                        <a href="#" data-bs-dismiss="modal" class="tf-btn btn-line fw-6 btn-hide-popup">Not interested</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- /auto popup  -->
-
-
-    <!-- Javascript -->
-    <script type="text/javascript" src="{{asset('frontend')}}/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/jquery.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/swiper-bundle.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/carousel.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/bootstrap-select.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/lazysize.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/count-down.js"></script>
-    <script type="text/javascript" src="js/wow.min.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/multiple-modal.js"></script>
-    <script type="text/javascript" src="{{asset('frontend')}}/js/main.js"></script>
-</body>
-
-
-<!-- Mirrored from themesflat.co/html/ecomus/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2024 08:50:02 GMT -->
-</html>
+@endsection

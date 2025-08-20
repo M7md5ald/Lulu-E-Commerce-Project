@@ -1,3 +1,6 @@
+@extends('admin.layout.index')
+@section('content')
+
 <main class="main-wrapper">
     <div class="main-content">
       <!--breadcrumb-->
@@ -733,3 +736,5 @@
 
     </div>
   </main>
+
+  @endsection

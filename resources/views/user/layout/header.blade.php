@@ -10,7 +10,7 @@
                     </div>
                     <div class="col-xl-3 col-md-4 col-6">
                         <a href="index.html" class="logo-header">
-                            <img src="{{asset('frontend')}}/images/logo/logo.svg" alt="logo" class="logo">
+                            <img src="{{assets('frontend')}}/images/logo/logo.svg" alt="logo" class="logo">
                         </a>
                     </div>
                     <div class="col-xl-6 tf-md-hidden">
@@ -24,7 +24,7 @@
                                                 <div class="demo-item">
                                                     <a href="index.html">
                                                         <div class="demo-image position-relative">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-01.jpg" src="{{asset('frontend')}}/images/demo/home-01.jpg" alt="home-01">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-01.jpg" src="{{s}}/images/demo/home-01.jpg" alt="home-01">
                                                             <div class="demo-label">
                                                                 <span class="demo-new">New</span>
                                                                 <span>Trend</span>
@@ -36,7 +36,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-multi-brand.html">
                                                         <div class="demo-image position-relative">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-multi-brand.jpg" src="{{asset('frontend')}}/images/demo/home-multi-brand.jpg" alt="home-multi-brand">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-multi-brand.jpg" src="{{s}}/images/demo/home-multi-brand.jpg" alt="home-multi-brand">
                                                             <div class="demo-label">
                                                                 <span class="demo-new">New</span>
                                                                 <span class="demo-hot">Hot</span>
@@ -48,7 +48,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-02.html">
                                                         <div class="demo-image position-relative">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-02.jpg" src="{{asset('frontend')}}/images/demo/home-02.jpg" alt="home-02">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-02.jpg" src="{{s}}/images/demo/home-02.jpg" alt="home-02">
                                                             <div class="demo-label">
                                                                 <span class="demo-hot">Hot</span>
                                                             </div>
@@ -59,7 +59,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-03.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-03.jpg" src="{{asset('frontend')}}/images/demo/home-03.jpg" alt="home-03">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-03.jpg" src="{{s}}/images/demo/home-03.jpg" alt="home-03">
                                                         </div>
                                                         <span class="demo-name">Home Fashion 03</span>
                                                     </a>
@@ -67,7 +67,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-04.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-04.jpg" src="{{asset('frontend')}}/images/demo/home-04.jpg" alt="home-04">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-04.jpg" src="{{s}}/images/demo/home-04.jpg" alt="home-04">
                                                         </div>
                                                         <span class="demo-name">Home Fashion 04</span>
                                                     </a>
@@ -75,7 +75,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-05.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-05.jpg" src="{{asset('frontend')}}/images/demo/home-05.jpg" alt="home-05">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-05.jpg" src="{{s}}/images/demo/home-05.jpg" alt="home-05">
                                                         </div>
                                                         <span class="demo-name">Home Fashion 05</span>
                                                     </a>
@@ -83,7 +83,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-06.html">
                                                         <div class="demo-image position-relative">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-06.jpg" src="{{asset('frontend')}}/images/demo/home-06.jpg" alt="home-06">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-06.jpg" src="{{s}}/images/demo/home-06.jpg" alt="home-06">
                                                             <div class="demo-label">
                                                                 <span class="demo-new">New</span>
                                                             </div>
@@ -94,7 +94,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-07.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-07.jpg" src="{{asset('frontend')}}/images/demo/home-07.jpg" alt="home-07">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-07.jpg" src="{{s}}/images/demo/home-07.jpg" alt="home-07">
                                                         </div>
                                                         <span class="demo-name">Home Fashion 07</span>
                                                     </a>
@@ -102,7 +102,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-08.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-08.jpg" src="{{asset('frontend')}}/images/demo/home-08.jpg" alt="home-08">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-08.jpg" src="{{s}}/images/demo/home-08.jpg" alt="home-08">
                                                         </div>
                                                         <span class="demo-name">Home Fashion 08</span>
                                                     </a>
@@ -110,7 +110,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-skincare.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-skincare.jpg" src="{{asset('frontend')}}/images/demo/home-skincare.jpg" alt="home-skincare">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-skincare.jpg" src="{{s}}/images/demo/home-skincare.jpg" alt="home-skincare">
                                                         </div>
                                                         <span class="demo-name">Home Skincare</span>
                                                     </a>
@@ -118,7 +118,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-headphone.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-headphone.jpg" src="{{asset('frontend')}}/images/demo/home-headphone.jpg" alt="home-headphone">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-headphone.jpg" src="{{s}}/images/demo/home-headphone.jpg" alt="home-headphone">
                                                         </div>
                                                         <span class="demo-name">Home Headphone</span>
                                                     </a>
@@ -126,7 +126,7 @@
                                                 <div class="demo-item">
                                                     <a href="home-giftcard.html">
                                                         <div class="demo-image">
-                                                            <img class="lazyload" data-src="{{asset('frontend')}}/images/demo/home-giftcard.jpg" src="{{asset('frontend')}}/images/demo/home-giftcard.jpg" alt="home-gift-card">
+                                                            <img class="lazyload" data-src="{{s}}/images/demo/home-giftcard.jpg" src="{{s}}/images/demo/home-giftcard.jpg" alt="home-gift-card">
                                                         </div>
                                                         <span class="demo-name">Home Gift Card</span>
                                                     </a>
@@ -187,7 +187,7 @@
                                                     <div class="collection-item hover-img">
                                                         <div class="collection-inner">
                                                             <a href="shop-men.html" class="collection-image img-style">
-                                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-1.jpg" src="{{asset('frontend')}}/images/collections/collection-1.jpg" alt="collection-demo-1">
+                                                                <img class="lazyload" data-src="{{s}}/images/collections/collection-1.jpg" src="{{s}}/images/collections/collection-1.jpg" alt="collection-demo-1">
                                                             </a>
                                                             <div class="collection-content">
                                                                 <a href="shop-men.html" class="tf-btn hover-icon btn-xl collection-title fs-16"><span>Men</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -200,7 +200,7 @@
                                                     <div class="collection-item hover-img">
                                                         <div class="collection-inner">
                                                             <a href="shop-women.html" class="collection-image img-style">
-                                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-2.jpg" src="{{asset('frontend')}}/images/collections/collection-2.jpg" alt="collection-demo-1">
+                                                                <img class="lazyload" data-src="{{s}}/images/collections/collection-2.jpg" src="{{s}}/images/collections/collection-2.jpg" alt="collection-demo-1">
                                                             </a>
                                                             <div class="collection-content">
                                                                 <a href="shop-women.html" class="tf-btn btn-xl collection-title fs-16 hover-icon"><span>Women</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -290,8 +290,8 @@
                                                                     <div class="card-product">
                                                                         <div class="card-product-wrapper">
                                                                             <a href="#" class="product-img">
-                                                                                <img class="lazyload img-product" data-src="{{asset('frontend')}}/images/products/orange-1.jpg" src="{{asset('frontend')}}/images/products/orange-1.jpg" alt="image-product">
-                                                                                <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/products/white-1.jpg" src="{{asset('frontend')}}/images/products/white-1.jpg" alt="image-product">
+                                                                                <img class="lazyload img-product" data-src="{{s}}/images/products/orange-1.jpg" src="{{s}}/images/products/orange-1.jpg" alt="image-product">
+                                                                                <img class="lazyload img-hover" data-src="{{s}}/images/products/white-1.jpg" src="{{s}}/images/products/white-1.jpg" alt="image-product">
                                                                             </a>
                                                                             <div class="list-product-btn absolute-2">
                                                                                 <a href="#quick_add" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
@@ -321,17 +321,17 @@
                                                                                 <li class="list-color-item color-swatch active">
                                                                                     <span class="tooltip">Orange</span>
                                                                                     <span class="swatch-value bg_orange-3"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/orange-1.jpg" src="{{asset('frontend')}}/images/products/orange-1.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/orange-1.jpg" src="{{s}}/images/products/orange-1.jpg" alt="image-product">
                                                                                 </li>
                                                                                 <li class="list-color-item color-swatch">
                                                                                     <span class="tooltip">Black</span>
                                                                                     <span class="swatch-value bg_dark"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/black-1.jpg" src="{{asset('frontend')}}/images/products/black-1.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/black-1.jpg" src="{{s}}/images/products/black-1.jpg" alt="image-product">
                                                                                 </li>
                                                                                 <li class="list-color-item color-swatch">
                                                                                     <span class="tooltip">White</span>
                                                                                     <span class="swatch-value bg_white"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/white-1.jpg" src="{{asset('frontend')}}/images/products/white-1.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/white-1.jpg" src="{{s}}/images/products/white-1.jpg" alt="image-product">
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -341,8 +341,8 @@
                                                                     <div class="card-product">
                                                                         <div class="card-product-wrapper">
                                                                             <div class="product-img">
-                                                                                <img class="lazyload img-product" data-src="{{asset('frontend')}}/images/products/white-3.jpg" src="{{asset('frontend')}}/images/products/white-3.jpg" alt="image-product">
-                                                                                <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/products/white-4.jpg" src="{{asset('frontend')}}/images/products/white-4.jpg" alt="image-product">
+                                                                                <img class="lazyload img-product" data-src="{{s}}/images/products/white-3.jpg" src="{{s}}/images/products/white-3.jpg" alt="image-product">
+                                                                                <img class="lazyload img-hover" data-src="{{s}}/images/products/white-4.jpg" src="{{s}}/images/products/white-4.jpg" alt="image-product">
                                                                             </div>
                                                                             <div class="list-product-btn absolute-2">
                                                                                 <a href="#shoppingCart" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
@@ -375,8 +375,8 @@
                                                                     <div class="card-product">
                                                                         <div class="card-product-wrapper">
                                                                             <div class="product-img">
-                                                                                <img class="lazyload img-product" data-src="{{asset('frontend')}}/images/products/white-2.jpg" src="{{asset('frontend')}}/images/products/white-2.jpg" alt="image-product">
-                                                                                <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/products/pink-1.jpg" src="{{asset('frontend')}}/images/products/pink-1.jpg" alt="image-product">
+                                                                                <img class="lazyload img-product" data-src="{{s}}/images/products/white-2.jpg" src="{{s}}/images/products/white-2.jpg" alt="image-product">
+                                                                                <img class="lazyload img-hover" data-src="{{s}}/images/products/pink-1.jpg" src="{{s}}/images/products/pink-1.jpg" alt="image-product">
                                                                             </div>
                                                                             <div class="list-product-btn">
                                                                                 <a href="#quick_add" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
@@ -412,17 +412,17 @@
                                                                                 <li class="list-color-item color-swatch active">
                                                                                     <span class="tooltip">White</span>
                                                                                     <span class="swatch-value bg_white"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/white-2.jpg" src="{{asset('frontend')}}/images/products/white-2.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/white-2.jpg" src="{{s}}/images/products/white-2.jpg" alt="image-product">
                                                                                 </li>
                                                                                 <li class="list-color-item color-swatch">
                                                                                     <span class="tooltip">Pink</span>
                                                                                     <span class="swatch-value bg_purple"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/pink-1.jpg" src="{{asset('frontend')}}/images/products/pink-1.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/pink-1.jpg" src="{{s}}/images/products/pink-1.jpg" alt="image-product">
                                                                                 </li>
                                                                                 <li class="list-color-item color-swatch">
                                                                                     <span class="tooltip">Black</span>
                                                                                     <span class="swatch-value bg_dark"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/black-2.jpg" src="{{asset('frontend')}}/images/products/black-2.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/black-2.jpg" src="{{s}}/images/products/black-2.jpg" alt="image-product">
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -432,8 +432,8 @@
                                                                     <div class="card-product">
                                                                         <div class="card-product-wrapper">
                                                                             <div class="product-img">
-                                                                                <img class="lazyload img-product" data-src="{{asset('frontend')}}/images/products/brown-2.jpg" src="{{asset('frontend')}}/images/products/brown-2.jpg" alt="image-product">
-                                                                                <img class="lazyload img-hover" data-src="{{asset('frontend')}}/images/products/brown-3.jpg" src="{{asset('frontend')}}/images/products/brown-3.jpg" alt="image-product">
+                                                                                <img class="lazyload img-product" data-src="{{s}}/images/products/brown-2.jpg" src="{{s}}/images/products/brown-2.jpg" alt="image-product">
+                                                                                <img class="lazyload img-hover" data-src="{{s}}/images/products/brown-3.jpg" src="{{s}}/images/products/brown-3.jpg" alt="image-product">
                                                                             </div>
                                                                             <div class="size-list">
                                                                                 <span>S</span>
@@ -469,12 +469,12 @@
                                                                                 <li class="list-color-item color-swatch active">
                                                                                     <span class="tooltip">Brown</span>
                                                                                     <span class="swatch-value bg_brown"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/brown-2.jpg" src="{{asset('frontend')}}/images/products/brown-2.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/brown-2.jpg" src="{{s}}/images/products/brown-2.jpg" alt="image-product">
                                                                                 </li>
                                                                                 <li class="list-color-item color-swatch">
                                                                                     <span class="tooltip">White</span>
                                                                                     <span class="swatch-value bg_white"></span>
-                                                                                    <img class="lazyload" data-src="{{asset('frontend')}}/images/products/white-5.jpg" src="{{asset('frontend')}}/images/products/white-5.jpg" alt="image-product">
+                                                                                    <img class="lazyload" data-src="{{s}}/images/products/white-5.jpg" src="{{s}}/images/products/white-5.jpg" alt="image-product">
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
