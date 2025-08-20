@@ -19,6 +19,7 @@
   <link href="{{asset('backend')}}/assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--main css-->
   <link href="{{asset('backend')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
   <link href="{{asset('backend')}}/sass/main.css" rel="stylesheet">
