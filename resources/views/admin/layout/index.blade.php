@@ -3,12 +3,13 @@
 
 
 <!-- Mirrored from codervent.com/matoxi/demo/vertical-menu/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2024 08:59:03 GMT -->
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Metoxi | Bootstrap 5 Admin Dashboard Template</title>
   <!--favicon-->
-	<link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
 
   <!--plugins-->
   <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
@@ -42,16 +43,16 @@
 
 
   <!--start main wrapper-->
-  @yield('content')
+  @yield('admin_content')
   <!--end main wrapper-->
 
   <!--start overlay-->
-    <div class="overlay btn-toggle"></div>
+  <div class="overlay btn-toggle"></div>
   <!--end overlay-->
 
- <!--start footer-->
+  <!--start footer-->
   @include('admin.layout.footer')
- <!--top footer-->
+  <!--top footer-->
 
   <!--start cart-->
   @include('admin.layout.cart')
@@ -84,4 +85,5 @@
 
 
 <!-- Mirrored from codervent.com/matoxi/demo/vertical-menu/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 08 Sep 2024 08:59:56 GMT -->
+
 </html>
