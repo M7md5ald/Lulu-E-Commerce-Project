@@ -20,7 +20,7 @@
                                                 <i class="icon-close"></i>
                                             </div>
                                             <a href="product-detail.html">
-                                                <img class="radius-3" src="images/products/orange-1.jpg" alt="">
+                                                <img class="radius-3" src="{{asset('frontend')}}/images/products/orange-1.jpg" alt="">
                                             </a>
                                         </div>
                                     </div>
@@ -30,7 +30,7 @@
                                                 <i class="icon-close"></i>
                                             </div>
                                             <a href="product-detail.html">
-                                                <img class="radius-3" src="images/products/pink-1.jpg" alt="">
+                                                <img class="radius-3" src="{{asset('frontend')}}/images/products/pink-1.jpg" alt="">
                                             </a>
                                         </div>
                                     </div>

@@ -27,7 +27,7 @@
                                     <div class="tf-mini-cart-item">
                                         <div class="tf-mini-cart-image">
                                             <a href="product-detail.html">
-                                                <img src="images/products/white-2.jpg" alt="">
+                                                <img src="{{asset('frontend')}}/images/products/white-2.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="tf-mini-cart-info">
@@ -47,7 +47,7 @@
                                     <div class="tf-mini-cart-item">
                                         <div class="tf-mini-cart-image">
                                             <a href="product-detail.html">
-                                                <img src="images/products/white-3.jpg" alt="">
+                                                <img src="{{asset('frontend')}}/images/products/white-3.jpg" alt="">
                                             </a>
                                         </div>
                                         <div class="tf-mini-cart-info">
@@ -75,7 +75,7 @@
                                                 <div class="tf-minicart-recommendations-item">
                                                     <div class="tf-minicart-recommendations-item-image">
                                                         <a href="product-detail.html">
-                                                            <img src="images/products/white-3.jpg" alt="">
+                                                            <img src="{{asset('frontend')}}/images/products/white-3.jpg" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="tf-minicart-recommendations-item-infos flex-grow-1">
@@ -93,7 +93,7 @@
                                                 <div class="tf-minicart-recommendations-item">
                                                     <div class="tf-minicart-recommendations-item-image">
                                                         <a href="product-detail.html">
-                                                            <img src="images/products/white-2.jpg" alt="">
+                                                            <img src="{{asset('frontend')}}/images/products/white-2.jpg" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="tf-minicart-recommendations-item-infos flex-grow-1">

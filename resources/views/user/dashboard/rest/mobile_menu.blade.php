@@ -275,10 +275,10 @@
                 <div class="bottom-bar-language">
                     <div class="tf-currencies">
                         <select class="image-select center style-default type-currencies">
-                            <option data-thumbnail="images/country/fr.svg">EUR <span>€ | France</span></option>
-                            <option data-thumbnail="images/country/de.svg">EUR <span>€ | Germany</span></option>
-                            <option selected data-thumbnail="images/country/us.svg">USD <span>$ | United States</span></option>
-                            <option data-thumbnail="images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
+                            <option data-thumbnail="{{asset('frontend')}}/images/country/fr.svg">EUR <span>€ | France</span></option>
+                            <option data-thumbnail="{{asset('frontend')}}/images/country/de.svg">EUR <span>€ | Germany</span></option>
+                            <option selected data-thumbnail="{{asset('frontend')}}/images/country/us.svg">USD <span>$ | United States</span></option>
+                            <option data-thumbnail="{{asset('frontend')}}/images/country/vn.svg">VND <span>₫ | Vietnam</span></option>
                         </select>
                     </div>
                     <div class="tf-languages">

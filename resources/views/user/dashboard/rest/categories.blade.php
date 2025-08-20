@@ -15,7 +15,7 @@
                                     <div class="collection-item style-left hover-img">
                                         <div class="collection-inner">
                                             <a href="shop-default.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="images/collections/collection-17.jpg" src="images/collections/collection-17.jpg" alt="collection-img">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-17.jpg" src="{{asset('frontend')}}/images/collections/collection-17.jpg" alt="collection-img">
                                             </a>
                                             <div class="collection-content">
                                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon fs-15"><span>Clothing</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -27,7 +27,7 @@
                                     <div class="collection-item style-left hover-img">
                                         <div class="collection-inner">
                                             <a href="shop-default.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="images/collections/collection-14.jpg" src="images/collections/collection-14.jpg" alt="collection-img">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-14.jpg" src="{{asset('frontend')}}/images/collections/collection-14.jpg" alt="collection-img">
                                             </a>
                                             <div class="collection-content">
                                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon fs-15"><span>Sunglasses</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -39,7 +39,7 @@
                                     <div class="collection-item style-left hover-img">
                                         <div class="collection-inner">
                                             <a href="shop-default.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="images/collections/collection-18.jpg" src="images/collections/collection-18.jpg" alt="collection-demo-1">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-18.jpg" src="{{asset('frontend')}}/images/collections/collection-18.jpg" alt="collection-demo-1">
                                             </a>
                                             <div class="collection-content">
                                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon fs-15"><span>Bags</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -51,7 +51,7 @@
                                     <div class="collection-item style-left hover-img">
                                         <div class="collection-inner">
                                             <a href="shop-default.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="images/collections/collection-15.jpg" src="images/collections/collection-15.jpg" alt="collection-demo-1">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-15.jpg" src="{{asset('frontend')}}/images/collections/collection-15.jpg" alt="collection-demo-1">
                                             </a>
                                             <div class="collection-content">
                                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon fs-15"><span>Fashion</span><i class="icon icon-arrow1-top-left"></i></a>
@@ -63,7 +63,7 @@
                                     <div class="collection-item style-left hover-img">
                                         <div class="collection-inner">
                                             <a href="shop-default.html" class="collection-image img-style">
-                                                <img class="lazyload" data-src="images/collections/collection-20.jpg" src="images/collections/collection-20.jpg" alt="collection-demo-1">
+                                                <img class="lazyload" data-src="{{asset('frontend')}}/images/collections/collection-20.jpg" src="{{asset('frontend')}}/images/collections/collection-20.jpg" alt="collection-demo-1">
                                             </a>
                                             <div class="collection-content">
                                                 <a href="shop-default.html" class="tf-btn collection-title hover-icon fs-15"><span>Accessories</span><i class="icon icon-arrow1-top-left"></i></a>

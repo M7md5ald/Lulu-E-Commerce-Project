@@ -76,7 +76,7 @@
                             </p>
                         </div>
                         <div>
-                            <img class="sizechart lazyload" data-src="images/shop/products/size_chart2.jpg" src="images/shop/products/size_chart2.jpg" alt="">
+                            <img class="sizechart lazyload" data-src="{{asset('frontend')}}/images/shop/products/size_chart2.jpg" src="{{asset('frontend')}}/images/shop/products/size_chart2.jpg" alt="">
                         </div>
                     </div>
                 </div>

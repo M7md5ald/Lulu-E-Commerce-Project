@@ -10,12 +10,12 @@
                             <div class="swiper-wrapper" >
                                 <div class="swiper-slide">
                                     <div class="item">
-                                        <img src="images/products/orange-1.jpg" alt="">
+                                        <img src="{{asset('frontend')}}/images/products/orange-1.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="item">
-                                        <img src="images/products/pink-1.jpg" alt="">
+                                        <img src="{{asset('frontend')}}/images/products/pink-1.jpg" alt="">
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                         <span class="icon icon-check"></span>
                                     </a>
                                     <div class="w-100">
-                                        <a href="#" class="btns-full">Buy with <img src="images/payments/paypal.png" alt=""></a>
+                                        <a href="#" class="btns-full">Buy with <img src="{{asset('frontend')}}/images/payments/paypal.png" alt=""></a>
                                         <a href="#" class="payment-more-option">More payment options</a>
                                     </div>
                                 </form>
