@@ -9,24 +9,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Metoxi | Bootstrap 5 Admin Dashboard Template</title>
   <!--favicon-->
-  <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png">
+  <link rel="icon" href="{{asset('backend')}}/assets/images/favicon-32x32.png" type="image/png">
 
   <!--plugins-->
-  <link href="assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="assets/plugins/metismenu/metisMenu.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/plugins/metismenu/mm-vertical.css">
-  <link rel="stylesheet" type="text/css" href="assets/plugins/simplebar/css/simplebar.css">
+  <link href="{{asset('backend')}}/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/plugins/metismenu/metisMenu.min.css">
+  <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/plugins/metismenu/mm-vertical.css">
+  <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/assets/plugins/simplebar/css/simplebar.css">
   <!--bootstrap css-->
-  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
   <!--main css-->
-  <link href="assets/css/bootstrap-extended.css" rel="stylesheet">
-  <link href="sass/main.css" rel="stylesheet">
-  <link href="sass/dark-theme.css" rel="stylesheet">
-  <link href="sass/semi-dark.css" rel="stylesheet">
-  <link href="sass/bordered-theme.css" rel="stylesheet">
-  <link href="sass/responsive.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/assets/css/bootstrap-extended.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/sass/main.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/sass/dark-theme.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/sass/semi-dark.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/sass/bordered-theme.css" rel="stylesheet">
+  <link href="{{asset('backend')}}/sass/responsive.css" rel="stylesheet">
 
 </head>
 
@@ -64,21 +64,21 @@
 
 
   <!--bootstrap js-->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="{{asset('backend')}}/assets/js/bootstrap.bundle.min.js"></script>
 
   <!--plugins-->
-  <script src="assets/js/jquery.min.js"></script>
+  <script src="{{asset('backend')}}/assets/js/jquery.min.js"></script>
   <!--plugins-->
-  <script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
-  <script src="assets/plugins/metismenu/metisMenu.min.js"></script>
-  <script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-  <script src="assets/js/index.js"></script>
-  <script src="assets/plugins/peity/jquery.peity.min.js"></script>
+  <script src="{{asset('backend')}}/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+  <script src="{{asset('backend')}}/assets/plugins/metismenu/metisMenu.min.js"></script>
+  <script src="{{asset('backend')}}/assets/plugins/apexchart/apexcharts.min.js"></script>
+  <script src="{{asset('backend')}}/assets/js/index.js"></script>
+  <script src="{{asset('backend')}}/assets/plugins/peity/jquery.peity.min.js"></script>
   <script>
     $(".data-attributes span").peity("donut")
   </script>
-  <script src="assets/plugins/simplebar/js/simplebar.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="{{asset('backend')}}/assets/plugins/simplebar/js/simplebar.min.js"></script>
+  <script src="{{asset('backend')}}/assets/js/main.js"></script>
 
 
 </body>
