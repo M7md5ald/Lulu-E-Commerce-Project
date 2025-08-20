@@ -13,8 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
     <!-- font -->
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <link rel="stylesheet" href="fonts/font-icons.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="{{asset('frontend')}}/assets/fonts/font-icons.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/assets/css/animate.css">
