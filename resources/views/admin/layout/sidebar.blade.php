@@ -31,12 +31,12 @@
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="material-icons-outlined">widgets</i>
               </div>
-              <div class="menu-title">Widgets</div>
+              <div class="menu-title">Category</div>
             </a>
             <ul>
-              <li><a href="widgets-data.html"><i class="material-icons-outlined">arrow_right</i>Data</a>
+              <li><a href="widgets-data.html"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Create Categories</a>
               </li>
-              <li><a href="widgets-advance.html"><i class="material-icons-outlined">arrow_right</i>Advance</a>
+              <li><a href="widgets-advance.html"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Show all Categories</a>
               </li>
             </ul>
           </li>
