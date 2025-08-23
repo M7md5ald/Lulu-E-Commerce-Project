@@ -34,9 +34,9 @@
               <div class="menu-title">Category</div>
             </a>
             <ul>
-              <li><a href="widgets-data.html"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Create Categories</a>
+              <li><a href="{{route('categories.create')}}"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Create Categories</a>
               </li>
-              <li><a href="widgets-advance.html"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Show all Categories</a>
+              <li><a href="{{route('categories.index')}}"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Show all Categories</a>
               </li>
             </ul>
           </li>

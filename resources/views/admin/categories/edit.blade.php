@@ -1,6 +1,7 @@
-@extends('admin.dashboard.index')
+@extends('admin.layout.index')
 @section('admin_content')
-<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+<div class="page-wrapper d-flex align-items-center justify-content-center"
+style="background-color: #f8f9fa;  min-height: 100vh;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-6">
