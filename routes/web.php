@@ -33,6 +33,8 @@ Route::put('/admin/products/{id}', [ProductController::class, 'updateProducts'])
 
 
 ####    stocks  ####
-Route::get('/admin/stocks/view', [StockController::class, 'viewstocks'])->name('stocks.view');
+Route::get('/admin/stocks/view', [StockController::class, 'viewStocks'])->name('stocks.view');
 
-Route::get('/admin/stocks/{id}/edit', [StockController::class, 'editstocks'])->name('stocks.edit');
+Route::get('/admin/stocks/{id}/edit', [StockController::class, 'editStocks'])->name('stocks.edit');
+
+Route::put('/admin/stocks/{id}', [StockController::class, 'updateStocks'])->name('stocks.update');
