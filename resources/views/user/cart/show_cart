@@ -42,7 +42,7 @@
                                         class="btn btn-sm btn-warning me-1">
                                         Add
                                     </a>
-                                    <form action="{{ route('user.cart.remove', $Cart_Item->product_id) }}"
+                                    <form action="{{ route('user.cart.remove', $Cart_Item->id) }}"
                                         method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')

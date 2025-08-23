@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use id;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\Cart_Item;
