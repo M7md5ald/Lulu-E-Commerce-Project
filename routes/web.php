@@ -29,3 +29,4 @@ Route::delete('/admin/products/{id}', [ProductController::class, 'deleteProducts
 Route::get('/admin/products/{id}/edit', [ProductController::class, 'editProducts'])->name('products.edit');
 
 Route::put('/admin/products/{id}', [ProductController::class, 'updateProducts'])->name('products.update');
+
