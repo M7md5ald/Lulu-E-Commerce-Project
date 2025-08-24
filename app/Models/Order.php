@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Coupon;
 use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
