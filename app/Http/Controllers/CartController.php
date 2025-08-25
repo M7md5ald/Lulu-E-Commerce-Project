@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Cart;
 use App\Models\Product;
-use App\Models\Cart_Item;
+use App\Models\CartItem;
 use Illuminate\Http\Request;
 
 class CartController extends Controller
@@ -15,14 +15,14 @@ class CartController extends Controller
         $cart = Cart::firstOrCreate(['user_id' => auth()->id()]);
         $cartItems = $cart->cart_items()->with('product')->get();
 
-        return view('cart.index', compact('cartItems'));
+        return view('user.cart.index', compact('cartItems'));
     }
 
     public function addToCart(Request $request, $productId)
     {
         $cart = Cart::firstOrCreate(['user_id' => auth()->id()]);
 
-        $cartItem = Cart_Item::where('cart_id', $cart->id)
+        $cartItem = CartItem::where('cart_id', $cart->id)
             ->where('product_id', $productId)
             ->first();
 
@@ -32,7 +32,7 @@ class CartController extends Controller
             $cartItem->save();
         } else {
             // Otherwise, create a new cart item
-            Cart_Item::create([
+            CartItem::create([
                 'cart_id' => $cart->id,
                 'product_id' => $productId,
                 'quantity' => $request->input('quantity', 1),
@@ -40,20 +40,20 @@ class CartController extends Controller
             ]);
         }
 
-        return redirect()->route('cart.show')->with('success', 'Product added to cart!');
+        return redirect()->route('user.cart.show')->with('success', 'Product added to cart!');
     }
 
     public function removeFromCart($cartItemId)
     {
-        $cartItem = Cart_Item::findOrFail($cartItemId);
+        $cartItem = CartItem::findOrFail($cartItemId);
         $cartItem->delete();
 
-        return redirect()->route('cart.show')->with('success', 'Item removed from cart.');
+        return redirect()->route('user.cart.show')->with('success', 'Item removed from cart.');
     }
 
     public function checkout()
     {
         // Handle checkout logic, e.g., payment and order creation
-        return view('cart.checkout');
+        return view('user.cart.checkout');
     }
 }

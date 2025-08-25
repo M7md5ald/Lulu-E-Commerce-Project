@@ -24,25 +24,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @forelse($cartItems as $Cart_Item)
+                            @forelse($cartItems as $CartItem)
                             <tr>
-                                <td>{{ '$' . number_format($Cart_Item->price, 2) }}</td>
-                                <td>{{ $Cart_Item->quantity }}</td>
-                                <td>{{ $Cart_Item->product_id ?? '—' }}</td>
+                                <td>{{ '$' . number_format($CartItem->price, 2) }}</td>
+                                <td>{{ $CartItem->quantity }}</td>
+                                <td>{{ $CartItem->product_id ?? '—' }}</td>
                                 <td>
-                                    @if ($Cart_Item->product && $Cart_Item->product->image)
-                                    <img src="{{ asset('storage/' . $Cart_Item->product->image) }}"
+                                    @if ($CartItem->product && $CartItem->product->image)
+                                    <img src="{{ asset('storage/' . $CartItem->product->image) }}"
                                         alt="Product Image" width="50" class="img-thumbnail">
                                     @else
                                     <span class="text-muted">No Image</span>
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('user.cart.add', $Cart_Item->product_id) }}"
+                                    <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
                                         class="btn btn-sm btn-warning me-1">
                                         Add
                                     </a>
-                                    <form action="{{ route('user.cart.remove', $Cart_Item->id) }}"
+                                    <form action="{{ route('user.cart.remove', $CartItem->id) }}"
                                         method="POST" class="d-inline">
                                         @csrf
                                         @method('DELETE')

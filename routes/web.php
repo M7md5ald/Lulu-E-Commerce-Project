@@ -20,4 +20,4 @@ Route::get('/user/dashboard', [UserDashboardController::class, 'index'])->name('
 Route::get('/user/cart', [CartController::class, 'showCart'])->name('user.cart.show');
 Route::post('/user/cart/add/{productId}', [CartController::class, 'addToCart'])->name('user.cart.add');
 Route::delete('/user/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('user.cart.remove');
-Route::post('/user/cart/checkout', [CartController::class, 'checkout'])->name('user.cart.checkout');
+Route::get('/user/cart/checkout', [CartController::class, 'checkout'])->name('user.cart.checkout');
