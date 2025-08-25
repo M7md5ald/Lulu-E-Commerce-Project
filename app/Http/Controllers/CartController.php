@@ -12,11 +12,19 @@ class CartController extends Controller
 {
     public function showCart()
     {
-        // Example: get all items for a user's cart (assuming user has one cart)
+        // Get the user's cart
         $cart = Cart::firstOrCreate(['user_id' => Auth::user()->id]);
+
+        // Get all items with product relation
         $cartItems = $cart->cart_items()->with('product')->get();
 
-        return view('user.cart.index', compact('cartItems'));
+        // Calculate total price
+        $totalPrice = $cartItems->sum(function ($item) {
+            return $item->price * $item->quantity;
+        });
+
+        // Pass both cartItems and totalPrice to the view
+        return view('user.cart.index', compact('cartItems', 'totalPrice'));
     }
 
     public function addToCart(Request $request, $productId)
