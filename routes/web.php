@@ -1,8 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\StockController;
-use App\Http\Controllers\ProductController;
+use App\Http\Controllers\admin\StockController;
+use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
 
 Route::get('/', function () {
@@ -13,12 +13,12 @@ Route::get('/', function () {
 Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
 
 //category
-Route::get('/categories/create',[CategoryController::class,'createCategory'])->name('categories.create');
-Route::post('/categories/post', [CategoryController::class, 'storeCategory'])->name('categories.store');
-Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
-Route::delete('/categories/{id}', [CategoryController::class, 'delete'])->name('categories.delete');
-Route::get('/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
-Route::put('/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
+Route::get('/admin/categories/create', [CategoryController::class, 'createCategory'])->name('categories.create');
+Route::post('/admin/categories/post', [CategoryController::class, 'storeCategory'])->name('categories.store');
+Route::get('/admin/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::delete('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('categories.delete');
+Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+Route::put('/admin/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
 
 //order
 Route::get('/admin/order', [App\Http\Controllers\admin\OrderController::class, 'order'])->name('admin.order');

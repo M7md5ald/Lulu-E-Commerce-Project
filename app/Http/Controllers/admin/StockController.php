@@ -1,25 +1,30 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Models\Stock;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
+
 
 class StockController extends Controller
 {
-    public function viewStocks(){
+    public function viewStocks()
+    {
         $stocks = Stock::all();
-        return view('stocks.view', compact('stocks'));
+        return view('admin.stocks.view', compact('stocks'));
     }
 
-    public function editStocks($id){
+    public function editStocks($id)
+    {
         $stock = Stock::findOrFail($id);
         $product = stock::findOrFail($stock->product_id);
-        return view('stocks.edit', compact('stock', 'product'));
+        return view('admin.stocks.edit', compact('stock', 'product'));
     }
 
-    public function updateStocks(Request $request, $id){
+    public function updateStocks(Request $request, $id)
+    {
         $stock = Stock::findOrFail($id);
 
         // if($request->hasFile('image')){
@@ -30,7 +35,7 @@ class StockController extends Controller
         // }
 
         $stock->update([
-            'quantity'=>$request->quantity,
+            'quantity' => $request->quantity,
         ]);
         return redirect()->route('stocks.view')->with('success', 'stock updated successfully');
     }
