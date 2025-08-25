@@ -5,7 +5,7 @@
     style="background-color: #f8f9fa; min-height: 100vh">
     <div class="col-md-6 col-lg-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
-            <h2 class="fw-semibold">Categories</h2>
+            <h2 class="fw-semibold">All Orders</h2>
             <a href="{{ route('categories.create') }}" class="btn btn-success fw-semibold">
                 + Add New Category
             </a>
@@ -19,16 +19,29 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Email</th>
+                                <th>Phone Number</th>
+                                <th>Total Amount</th>
+                                <th>Status</th>
+                                <th>User ID</th>
+                                <th>Payment ID</th>
+                                <th>Coupon ID</th>
                                 <th>Created At</th>
-                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($categories as $category)
+                            @foreach($orders as $order)
                                 <tr>
-                                    <td>{{ $category->id }}</td>
-                                    <td>{{ $category->name }}</td>
-                                    <td>{{ $category->created_at }}</td>
+                                    <td>{{ $order->id }}</td>
+                                    <td>{{ $order->current_name }}</td>
+                                    <td>{{ $order->current_email }}</td>
+                                    <td>{{ $order->current_phone_number }}</td>
+                                    <td>{{ $order->total_amount }}</td>
+                                    <td>{{ $order->status }}</td>
+                                    <td>{{ $order->user_id }}</td>
+                                    <td>{{ $order->payment_id }}</td>
+                                    <td>{{ $order->coupon_id }}</td>
+                                    <td>{{ $order->created_at }}</td>
                                     <td>
                                         <a href="{{ route('categories.edit', $category->id) }}" 
                                            class="btn btn-sm btn-warning me-1">

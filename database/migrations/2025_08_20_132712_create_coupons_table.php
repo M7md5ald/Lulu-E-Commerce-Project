@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('code');
             $table->foreignId('order_id')->onDelete('cascade');
             $table->enum('discount_type',['percentage', 'fixed'])->default('percentage');
-            $table->boolean('is_active')->default('true');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
