@@ -1,7 +1,8 @@
 @extends('admin.layout.index')
 @section('admin_content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+<div class="page-wrapper d-flex align-items-center justify-content-center"
+  style="background-color: #f8f9fa; min-height: 100vh;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-7">
@@ -21,8 +22,7 @@
                   name="name"
                   class="form-control form-control-lg"
                   value="{{ old('name', $product->name) }}"
-                  required
-                >
+                  required>
               </div>
 
               <div class="mb-3">
@@ -33,8 +33,7 @@
                   step="0.01"
                   class="form-control form-control-lg"
                   value="{{ old('price', $product->price) }}"
-                  required
-                >
+                  required>
               </div>
 
               <!-- <div class="mb-3">
@@ -51,12 +50,12 @@
               <div class="mb-3">
                 <label for="category_id" class="form-label fw-semibold">Category</label>
                 <select name="category_id" class="form-control form-control-lg" required>
-                  <option value="">-- Select Category --</option>
+                  <!-- <option value="">-- Select Category --</option> -->
                   @foreach($categories as $category)
-                    <option value="{{ $category->id }}">
-                        {{ $product->category_id == $category->id ? 'selected' : '' }}>
-                        {{ $category->name }}
-                    </option>
+                  <option value="{{ $category->id }}">
+                    {{ $product->category_id == $category->id ? 'selected' : '' }}
+                    {{ $category->name }}
+                  </option>
                   @endforeach
                 </select>
               </div>
@@ -68,18 +67,17 @@
                   name="image"
                   class="form-control form-control-lg"
                   @if ($product->image)
-                                        <div class="mt-2">
-                                            <img src="{{ asset('storage/' . $product->image) }}" alt="Current Image"
-                                                class="img-thumbnail" width="100">
-                                        </div>
-                    @endif
-                >
+                <div class="mt-2">
+                  <img src="{{ asset('storage/' . $product->image) }}" alt="Current Image"
+                    class="img-thumbnail" width="100">
+                </div>
+                @endif
               </div>
 
               <div class="mb-4">
                 <label for="description" class="form-label fw-semibold">Description</label>
-                                    <textarea name="description" rows="3" class="form-control form-control-lg"
-                                        placeholder="Enter product description">{{ old('description', $product->description) }}</textarea>
+                <textarea name="description" rows="3" class="form-control form-control-lg"
+                  placeholder="Enter product description">{{ old('description', $product->description) }}</textarea>
               </div>
 
               <div class="d-grid gap-2">

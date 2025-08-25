@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
@@ -12,7 +13,7 @@ class ProductController extends Controller
     public function createProducts(){
         $categories = Category::all();
         
-        return view('products.create', compact('categories'));
+        return view('admin.products.create', compact('categories'));
     }
 
     public function storeProducts(Request $request){
@@ -44,7 +45,7 @@ class ProductController extends Controller
 
     public function viewProducts(){
         $products = Product::all();
-        return view('products.view', compact('products'));
+        return view('admin.products.view', compact('products'));
     }
 
     public function deleteProducts($id){
@@ -56,7 +57,7 @@ class ProductController extends Controller
     public function editProducts($id){
         $categories = Category::all();
         $product = Product::findOrFail($id);
-        return view('products.edit', compact('product', 'categories'));
+        return view('admin.products.edit', compact('product', 'categories'));
     }
 
     public function updateProducts(Request $request, $id){
