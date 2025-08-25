@@ -31,7 +31,7 @@
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="material-icons-outlined">widgets</i>
               </div>
-              <div class="menu-title">Category</div>
+              <div class="menu-title">Categories</div>
             </a>
             <ul>
               <li><a href="{{route('categories.create')}}"><i class="material-icons" style="font-size: 10px; margin-right: 6px;">fiber_manual_record</i>Create Categories</a>
@@ -40,12 +40,12 @@
               </li>
             </ul>
           </li>
-          <li class="menu-label">UI Elements</li>
+          <!-- <li class="menu-label">UI Elements</li> -->
           <li>
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="material-icons-outlined">inventory_2</i>
               </div>
-              <div class="menu-title">Cards</div>
+              <div class="menu-title">Products</div>
             </a>
             <ul>
               <li><a href="component-cards-basic.html"><i class="material-icons-outlined">arrow_right</i>Basic</a>
@@ -61,7 +61,7 @@
             <a href="javascript:;" class="has-arrow">
               <div class="parent-icon"><i class="material-icons-outlined">shopping_bag</i>
               </div>
-              <div class="menu-title">eCommerce</div>
+              <div class="menu-title">Stocks</div>
             </a>
             <ul>
               <li><a href="ecommerce-add-product.html"><i class="material-icons-outlined">arrow_right</i>Add Product</a>
@@ -82,10 +82,10 @@
             <a class="has-arrow" href="javascript:;">
               <div class="parent-icon"><i class="material-icons-outlined">card_giftcard</i>
               </div>
-              <div class="menu-title">Components</div>
+              <div class="menu-title">Orders</div>
             </a>
             <ul>
-              <li><a href="component-alerts.html"><i class="material-icons-outlined">arrow_right</i>Alerts</a>
+              <li><a href="{{route('admin.order')}}"><i class="material-icons-outlined">arrow_right</i>Show All Orders</a>
               </li>
               <li><a href="component-accordions.html"><i class="material-icons-outlined">arrow_right</i>Accordions</a>
               </li>
@@ -129,7 +129,7 @@
             <a class="has-arrow" href="javascript:;">
               <div class="parent-icon"><i class="material-icons-outlined">view_agenda</i>
               </div>
-              <div class="menu-title">Icons</div>
+              <div class="menu-title">Coupons</div>
             </a>
             <ul>
               <li><a href="icons-line-icons.html"><i class="material-icons-outlined">arrow_right</i>Line Icons</a>
