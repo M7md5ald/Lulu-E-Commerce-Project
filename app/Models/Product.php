@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use App\Models\Stock;
+use App\Models\Category;
+use App\Models\Wishlist_Item;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
@@ -17,14 +20,14 @@ class Product extends Model
     }
 
     public function order_items(){
-        return $this->hasMany(Order_item::class);
+        return $this->hasMany(Order_Item::class);
     }
 
     public function cart_items(){
-        return $this->hasMany(Cart_item::class);
+        return $this->hasMany(cart_Item::class);
     }
 
     public function wishlist_items(){
-        return $this->hasMany(Wishlist_item::class);
+        return $this->hasMany(Wishlist_Item::class);
     }
 }

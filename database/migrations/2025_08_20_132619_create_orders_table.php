@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('current_name');
+            $table->string('current_email');
+            $table->string('current_phone_number', 20);
             $table->decimal('total_amount', 8, 2);
             $table->enum('status',['pending', 'paid', 'cancelled'])->default('pending');
             $table->foreignId('user_id')->onDelete('cascade');
