@@ -172,7 +172,8 @@
                                 </label>
                             </div>
                             <div class="tf-mini-cart-view-checkout">
-                                <a href="view-cart.html"
+                                <!-- <a href="view-cart.html" -->
+                                <a href="{{ route('user.cart.show', $CartItem->id) }}"
                                     class="tf-btn btn-outline radius-3 link w-100 justify-content-center">View
                                     cart</a>
                                 <a href="checkout.html"

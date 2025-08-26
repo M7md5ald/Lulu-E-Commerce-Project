@@ -32,10 +32,10 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
+                                    <!-- <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
                                         class="btn btn-sm btn-warning me-1">
                                         Add
-                                    </a>
+                                    </a> -->
                                     <form action="{{ route('user.cart.remove', $CartItem->id) }}"
                                         method="POST" class="d-inline">
                                         @csrf
