@@ -1,11 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\admin;
 
 use App\Models\Cart;
 use App\Models\Product;
 use App\Models\CartItem;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
@@ -24,7 +25,7 @@ class CartController extends Controller
         });
 
         // Pass both cartItems and totalPrice to the view
-        return view('user.cart.index', compact('cartItems', 'totalPrice'));
+        return view('user.cart.show', compact('cartItems', 'totalPrice'));
     }
 
     public function addToCart(Request $request, $productId)
@@ -57,7 +58,7 @@ class CartController extends Controller
         $cartItem = CartItem::findOrFail($cartItemId);
         $cartItem->delete();
 
-        return redirect()->route('user.cart.show')->with('success', 'Item removed from cart.');
+        return redirect()->route('user.cart.showx')->with('success', 'Item removed from cart.');
     }
 
     public function checkout()

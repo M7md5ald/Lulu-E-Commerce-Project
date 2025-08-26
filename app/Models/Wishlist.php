@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Wishlist_Item;
 use Illuminate\Database\Eloquent\Model;
 
 class Wishlist extends Model

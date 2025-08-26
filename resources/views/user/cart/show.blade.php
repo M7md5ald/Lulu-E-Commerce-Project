@@ -1,4 +1,4 @@
-@extends('user.layouts.index')
+@extends('user.layout.index')
 
 @section('content')
 <div class="page-wrapper py-5" style="background-color: #f8f9fa;">
@@ -32,10 +32,10 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <!-- <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
+                                    <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
                                         class="btn btn-sm btn-warning me-1">
                                         Add
-                                    </a> -->
+                                    </a>
                                     <form action="{{ route('user.cart.remove', $CartItem->id) }}"
                                         method="POST" class="d-inline">
                                         @csrf
