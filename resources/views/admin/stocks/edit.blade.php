@@ -16,36 +16,42 @@
 
               <div class="mb-3">
                 <label for="name" class="form-label fw-semibold">Product Name</label>
-                  <div class="input-group">
-                      <span class="input-group-text"><i class="fas fa-tag"></i></span>
-                      <input type="text" 
-                              name="name" 
-                              class="form-control form-control-lg readonly-field" 
-                              value="{{ old('name', $product->name) }}" 
-                              readonly>
-                  </div>
-                  <div class="form-text text-muted mt-1">
-                      <i class="fas fa-info-circle me-1"></i>Product name cannot be edited in stock management
-                  </div>
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-tag"></i></span>
+                  <input type="text"
+                    class="form-control form-control-lg readonly-field"
+                    value="{{ $stock->product->name }}"
+                    readonly>
+                </div>
+                <div class="form-text text-muted mt-1">
+                  <i class="fas fa-info-circle me-1"></i>Product name cannot be edited in stock management
+                </div>
               </div>
 
               <div class="mb-3">
                 <label for="quantity" class="form-label fw-semibold">Quantity</label>
-                <input
-                  type="number"
-                  name="quantity"
-                  class="form-control form-control-lg"
-                  value="{{ old('quantity', $stock->quantity) }}"
-                  required
-                >
+                <div class="input-group">
+                  <span class="input-group-text"><i class="fas fa-cubes"></i></span>
+                  <input type="number"
+                    name="quantity"
+                    class="form-control form-control-lg @error('quantity') is-invalid @enderror"
+                    value="{{ old('quantity', $stock->quantity) }}"
+                    min="0"
+                    required>
+                  @error('quantity')
+                  <div class="invalid-feedback">
+                    {{ $message }}
+                  </div>
+                  @enderror
+                </div>
               </div>
 
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-success fw-semibold">
-                  Save Product
+                  <i class="fas fa-save me-2"></i>Update Stock
                 </button>
                 <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
-                  Cancel
+                  <i class="fas fa-times me-2"></i>Cancel
                 </a>
               </div>
 

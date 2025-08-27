@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\admin;
 
+use App\Models\Stock;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -34,13 +35,16 @@ class ProductController extends Controller
             $imagePath = $request->file('image')->store('products', 'public');
         }
 
-        Product::create([
+        $product = Product::create([
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
             //'quantity'=>$request->quantity,
             'image' => $imagePath,
             'category_id' => $request->category_id,
+        ]);
+        Stock::create([
+            'product_id' => $product->id
         ]);
         return redirect()->route('products.create')->with('success', 'Product added successfully');
     }
