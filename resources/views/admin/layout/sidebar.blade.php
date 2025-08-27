@@ -64,18 +64,18 @@
           <div class="menu-title">Stocks</div>
         </a>
         <ul>
-          <li><a href="ecommerce-add-product.html"><i class="material-icons-outlined">arrow_right</i>Add Product</a>
+          <li><a href="{{route('stocks.view')}}"><i class="material-icons-outlined">arrow_right</i>View</a>
           </li>
-          <li><a href="ecommerce-products.html"><i class="material-icons-outlined">arrow_right</i>Products</a>
+          <li><a href="{{route('stocks.edit')}}"><i class="material-icons-outlined">arrow_right</i>Edit Product Stock</a>
           </li>
-          <li><a href="ecommerce-customers.html"><i class="material-icons-outlined">arrow_right</i>Customers</a>
+          <!-- <li><a href="ecommerce-customers.html"><i class="material-icons-outlined">arrow_right</i>Customers</a>
           </li>
           <li><a href="ecommerce-customer-details.html"><i class="material-icons-outlined">arrow_right</i>Customer Details</a>
           </li>
           <li><a href="ecommerce-orders.html"><i class="material-icons-outlined">arrow_right</i>Orders</a>
           </li>
           <li><a href="ecommerce-customer-details.html"><i class="material-icons-outlined">arrow_right</i>Order Details</a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <li>

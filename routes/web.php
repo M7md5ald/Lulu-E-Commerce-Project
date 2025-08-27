@@ -22,9 +22,11 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
+
 #######################
 #####    admin    #####
 #######################
+
 
 Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
 
@@ -47,19 +49,19 @@ Route::put('/admin/products/{id}', [ProductController::class, 'updateProducts'])
 //order
 Route::get('/admin/order', [App\Http\Controllers\admin\OrderController::class, 'order'])->name('admin.order');
 
+//stocks
+Route::get('/admin/stocks/view', [StockController::class, 'viewStocks'])->name('stocks.view');
+Route::get('/admin/stocks/{id}/edit', [StockController::class, 'editStocks'])->name('stocks.edit');
+Route::put('/admin/stocks/{id}', [StockController::class, 'updateStocks'])->name('stocks.update');
+
+
 ######################
 #####    user    #####
 ######################
+
 
 Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::class, 'index'])->name('user.dashboard');
 
 //order
 Route::get('/user/order', [App\Http\Controllers\user\OrderController::class, 'order'])->name('user.order');
 
-
-####    stocks  ####
-Route::get('/admin/stocks/view', [StockController::class, 'viewStocks'])->name('stocks.view');
-
-Route::get('/admin/stocks/{id}/edit', [StockController::class, 'editStocks'])->name('stocks.edit');
-
-Route::put('/admin/stocks/{id}', [StockController::class, 'updateStocks'])->name('stocks.update');
