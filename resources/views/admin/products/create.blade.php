@@ -1,7 +1,8 @@
 @extends('admin.layout.index')
 @section('admin_content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+<div class="page-wrapper d-flex align-items-center justify-content-center"
+  style="background-color: #f8f9fa; min-height: 100vh;">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-7">
@@ -20,8 +21,7 @@
                   name="name"
                   class="form-control form-control-lg"
                   placeholder="Enter product name"
-                  required
-                >
+                  required>
               </div>
 
               <div class="mb-3">
@@ -32,8 +32,7 @@
                   step="0.01"
                   class="form-control form-control-lg"
                   placeholder="Enter price"
-                  required
-                >
+                  required>
               </div>
 
               <!-- <div class="mb-3">
@@ -49,8 +48,14 @@
 
               <div class="mb-3">
                 <label for="category_id" class="form-label fw-semibold">Category</label>
+                @error('category_id')
+                <div class="text-danger small mb-1">{{ $message }}</div>
+                @enderror
                 <select name="category_id" class="form-control form-control-lg" required>
                   <option value="">-- Select Category --</option>
+                  @foreach($categories as $category)
+                  <option value="{{ $category->id }}">{{ $category->name }}</option>
+                  @endforeach
                 </select>
               </div>
 
@@ -59,8 +64,7 @@
                 <input
                   type="file"
                   name="image"
-                  class="form-control form-control-lg"
-                >
+                  class="form-control form-control-lg">
               </div>
 
               <div class="mb-4">
@@ -69,8 +73,7 @@
                   name="description"
                   rows="3"
                   class="form-control form-control-lg"
-                  placeholder="Enter product description"
-                ></textarea>
+                  placeholder="Enter product description"></textarea>
               </div>
 
               <div class="d-grid gap-2">
