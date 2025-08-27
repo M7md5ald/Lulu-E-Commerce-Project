@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
@@ -19,7 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
 
 #######################
 #####    admin    #####
@@ -28,7 +29,7 @@ require __DIR__.'/auth.php';
 Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
 
 //category
-Route::get('/admin/categories/create',[CategoryController::class,'createCategory'])->name('categories.create');
+Route::get('/admin/categories/create', [CategoryController::class, 'createCategory'])->name('categories.create');
 Route::post('/admin/categories/post', [CategoryController::class, 'storeCategory'])->name('categories.store');
 Route::get('/admin/categories', [CategoryController::class, 'index'])->name('categories.index');
 Route::delete('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('categories.delete');
@@ -48,6 +49,11 @@ Route::get('/admin/order', [App\Http\Controllers\admin\OrderController::class, '
 
 ######################
 #####    user    #####
+// Cart Routes
+Route::get('/user/cart', [CartController::class, 'showCart'])->name('user.cart.show');
+Route::post('/user/cart/add/{productId}', [CartController::class, 'addToCart'])->name('user.cart.add');
+Route::delete('/user/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('user.cart.remove');
+Route::get('/user/cart/checkout', [CartController::class, 'checkout'])->name('user.cart.checkout');
 ######################
 
 Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::class, 'index'])->name('user.dashboard');
