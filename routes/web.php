@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\admin\CartController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\admin\StockController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
 
@@ -26,6 +27,7 @@ require __DIR__ . '/auth.php';
 #####    admin    #####
 #######################
 
+
 Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
 
 //category
@@ -47,6 +49,12 @@ Route::put('/admin/products/{id}', [ProductController::class, 'updateProducts'])
 //order
 Route::get('/admin/order', [App\Http\Controllers\admin\OrderController::class, 'order'])->name('admin.order');
 
+//stocks
+Route::get('/admin/stocks/view', [StockController::class, 'viewStocks'])->name('stocks.view');
+Route::get('/admin/stocks/{stock}/edit', [StockController::class, 'editStocks'])->name('stocks.edit');
+Route::put('/admin/stocks/{stock}', [StockController::class, 'updateStocks'])->name('stocks.update');
+
+
 ######################
 #####    user    #####
 // Cart Routes
@@ -56,7 +64,9 @@ Route::delete('/user/cart/remove/{cartItemId}', [CartController::class, 'removeF
 Route::get('/user/cart/checkout', [CartController::class, 'checkout'])->name('user.cart.checkout');
 ######################
 
+
 Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::class, 'index'])->name('user.dashboard');
 
 //order
 Route::get('/user/order', [App\Http\Controllers\user\OrderController::class, 'order'])->name('user.order');
+

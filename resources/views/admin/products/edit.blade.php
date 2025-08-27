@@ -11,7 +11,7 @@
             Edit Product
           </div>
           <div class="card-body">
-            <form action="{{ route('products.update', $product) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ route('stocks.update', $stock) }}" method="POST">
               @csrf
               @method('PUT')
 
