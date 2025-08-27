@@ -1,5 +1,5 @@
 @extends('user.layout.index')
-@section('user_content')
+@section('content')
 
 <!-- Slider --> <!-- la2a -->
 <div class="tf-slideshow slider-effect-fade position-relative">

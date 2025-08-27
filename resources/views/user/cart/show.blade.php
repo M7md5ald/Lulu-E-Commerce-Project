@@ -1,0 +1,77 @@
+@extends('user.layout.index')
+
+@section('content')
+<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+
+        <div class="card shadow-sm border-0 rounded">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover align-middle">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Price</th>
+                                <th>Quantity</th>
+                                <th>Product ID</th>
+                                <th>Image</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @forelse($cartItems as $CartItem)
+                            <tr>
+                                <td>{{ '$' . number_format($CartItem->price, 2) }}</td>
+                                <td>{{ $CartItem->quantity }}</td>
+                                <td>{{ $CartItem->product_id ?? '—' }}</td>
+                                <td>
+                                    @if ($CartItem->product && $CartItem->product->image)
+                                    <img src="{{ asset('storage/' . $CartItem->product->image) }}"
+                                        alt="Product Image" width="50" class="img-thumbnail">
+                                    @else
+                                    <span class="text-muted">No Image</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    <a href="{{ route('user.cart.add', $CartItem->product_id) }}"
+                                        class="btn btn-sm btn-warning me-1">
+                                        Add
+                                    </a>
+                                    <form action="{{ route('user.cart.remove', $CartItem->id) }}"
+                                        method="POST" class="d-inline">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-sm btn-danger"
+                                            onclick="return confirm('Are you sure you want to delete this product?')">
+                                            Delete
+                                        </button>
+                                    </form>
+                                </td>
+                            </tr>
+                            @empty
+                            <tr>
+                                <td colspan="5" class="text-center text-muted">No products available.</td>
+                            </tr>
+                            @endforelse
+                        </tbody>
+                    </table>
+                    <div class="mt-4">
+                        <div class="card shadow-sm border-0 rounded">
+                            <div class="card-body text-end">
+                                <h5 class="fw-semibold">
+                                    Total Price: <span class="text-success">${{ number_format($totalPrice, 2) }}</span>
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2 class="fw-semibold">Cart</h2>
+                        <a href="{{ route('user.cart.checkout') }}" class="btn btn-success fw-semibold">
+                            + Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection

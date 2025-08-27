@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\admin\CartController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin\StockController;
 use App\Http\Controllers\admin\ProductController;
@@ -21,7 +22,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__ . '/auth.php';
-
 
 #######################
 #####    admin    #####
@@ -57,6 +57,11 @@ Route::put('/admin/stocks/{stock}', [StockController::class, 'updateStocks'])->n
 
 ######################
 #####    user    #####
+// Cart Routes
+Route::get('/user/cart', [CartController::class, 'showCart'])->name('user.cart.show');
+Route::post('/user/cart/add/{productId}', [CartController::class, 'addToCart'])->name('user.cart.add');
+Route::delete('/user/cart/remove/{cartItemId}', [CartController::class, 'removeFromCart'])->name('user.cart.remove');
+Route::get('/user/cart/checkout', [CartController::class, 'checkout'])->name('user.cart.checkout');
 ######################
 
 
