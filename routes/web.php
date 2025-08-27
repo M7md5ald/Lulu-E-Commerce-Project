@@ -31,7 +31,7 @@ Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::
 //category
 Route::get('/admin/categories/create', [CategoryController::class, 'createCategory'])->name('categories.create');
 Route::post('/admin/categories/post', [CategoryController::class, 'storeCategory'])->name('categories.store');
-Route::get('/admin/categories', [CategoryController::class, 'index'])->name('categories.index');
+Route::get('/admin/categories/view', [CategoryController::class, 'index'])->name('categories.index');
 Route::delete('/admin/categories/{id}', [CategoryController::class, 'delete'])->name('categories.delete');
 Route::get('/admin/categories/{id}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
 Route::put('/admin/categories/{id}', [CategoryController::class, 'update'])->name('categories.update');
