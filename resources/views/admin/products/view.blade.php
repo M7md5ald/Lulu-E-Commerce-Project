@@ -2,7 +2,7 @@
 @section('admin_content')
 
 <div class="page-wrapper d-flex align-items-center justify-content-center"
-    style="background-color: #f8f9fa; min-height: 100vh;">
+    style="background-color: #f8f9fa; min-height: 100vh; margin-left: 250px; padding-top: 80px;">
     <div class="container">
         <div class="d-flex justify-content-between align-items-center mb-4">
             <h2 class="fw-semibold">Products</h2>
