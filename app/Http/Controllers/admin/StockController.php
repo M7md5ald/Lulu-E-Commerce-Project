@@ -4,6 +4,7 @@ namespace App\Http\Controllers\admin;
 
 use App\Models\Stock;
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -19,25 +20,21 @@ class StockController extends Controller
         return view('admin.stocks.view', compact('stocks'));
     }
 
-    public function editStocks(Stock $stock)
+    public function editStocks($id)
     {
-        //$stock = Stock::with('product')->findOrFail($id);
+        $stock = Stock::with('product')->findOrFail($id);
+        $categories = Category::all();
 
-        //$products = Product::all();
-
-        return view('admin.stocks.edit', compact('stock'));
-
-        //return view('admin.stocks.edit', compact('stock', 'products'));
+        return view('admin.stocks.edit', compact('stock', 'categories'));
     }
 
-    public function updateStocks(Request $request, Stock $stock)
+    public function updateStocks(Request $request, $id)
     {
-        $validated = $request->validate([
-            'quantity' => 'required|integer|min:0'
+        $stock = Stock::findOrFail($id);
+
+        $stock->update([
+            'quantity' => $request->quantity
         ]);
-
-        $stock->update($validated);
-
-        return redirect()->route('stocks.view')->with('success', 'Stock updated successfully');
+        return redirect()->route('stocks.view')->with('success', 'Quantity updated successfully');
     }
 }

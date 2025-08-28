@@ -15,43 +15,65 @@
               @method('PUT')
 
               <div class="mb-3">
-                <label for="name" class="form-label fw-semibold">Product Name</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-tag"></i></span>
-                  <input type="text"
-                    class="form-control form-control-lg readonly-field"
-                    value="{{ $stock->product->name }}"
-                    readonly>
+                <label class="form-label fw-semibold">Name</label>
+                <div class="form-control form-control-lg bg-light">
+                  ${{ old('name', $stock->product->name) }}
                 </div>
-                <div class="form-text text-muted mt-1">
-                  <i class="fas fa-info-circle me-1"></i>Product name cannot be edited in stock management
+                <input type="hidden" name="name" value="{{ old('name', $stock->product->name) }}">
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Price</label>
+                <div class="form-control form-control-lg bg-light">
+                  ${{ number_format(old('price', $stock->product->price), 2) }}
                 </div>
+                <input type="hidden" name="price" value="{{ old('price', $stock->product->price) }}">
               </div>
 
               <div class="mb-3">
                 <label for="quantity" class="form-label fw-semibold">Quantity</label>
-                <div class="input-group">
-                  <span class="input-group-text"><i class="fas fa-cubes"></i></span>
-                  <input type="number"
-                    name="quantity"
-                    class="form-control form-control-lg @error('quantity') is-invalid @enderror"
-                    value="{{ old('quantity', $stock->quantity) }}"
-                    min="0"
-                    required>
-                  @error('quantity')
-                  <div class="invalid-feedback">
-                    {{ $message }}
-                  </div>
-                  @enderror
+                <input
+                  type="number"
+                  name="quantity"
+                  class="form-control form-control-lg"
+                  value="{{ old('quantity', $stock->quantity) }}"
+                  required>
+              </div>
+
+              <div class="mb-3">
+                <label for="category_id" class="form-label fw-semibold">Category</label>
+                  @foreach($categories as $category)
+                  <option value="{{ $category->id }}">
+                    {{ $stock->product->category_id == $category->id ? 'selected' : '' }}
+                    {{ $category->name }}
+                  </option>
+                  @endforeach
+              </div>
+
+              <div class="mb-3">
+                <label for="image" class="form-label fw-semibold">Product Image</label>
+                  @if ($stock->product->image)
+                <div class="mt-2">
+                  <img src="{{ asset('storage/' . $product->image) }}" alt="Current Image"
+                    class="img-thumbnail" width="100">
                 </div>
+                @endif
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Description</label>
+                <div class="form-control form-control-lg bg-light">
+                  ${{ old('description', $stock->product->description) }}
+                </div>
+                <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
               </div>
 
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-success fw-semibold">
-                  <i class="fas fa-save me-2"></i>Update Stock
+                  Save
                 </button>
                 <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
-                  <i class="fas fa-times me-2"></i>Cancel
+                  Cancel
                 </a>
               </div>
 
