@@ -1,7 +1,7 @@
 @extends('admin.layout.index')
 @section('admin_content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+<div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px">
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-md-8 col-lg-7">
@@ -51,34 +51,34 @@
                   </option>
                   @endforeach
                 </div>
-                </div>
+              </div>
 
-                <div class="mb-3">
-                  <label for="image" class="form-label fw-semibold">Product Image</label>
-                  @if ($stock->product->image)
-                  <div class="mt-2">
-                    <img src="{{ asset('storage/' . $stock->product->image) }}" alt="Current Image"
-                      class="img-thumbnail" width="100">
-                  </div>
-                  @endif
+              <div class="mb-3">
+                <label for="image" class="form-label fw-semibold">Product Image</label>
+                @if ($stock->product->image)
+                <div class="mt-2">
+                  <img src="{{ asset('storage/' . $stock->product->image) }}" alt="Current Image"
+                    class="img-thumbnail" width="100">
                 </div>
+                @endif
+              </div>
 
-                <div class="mb-3">
-                  <label class="form-label fw-semibold">Description</label>
-                  <div class="form-control form-control-lg bg-light">
-                    {{ old('description', $stock->product->description) }}
-                  </div>
-                  <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
+              <div class="mb-3">
+                <label class="form-label fw-semibold">Description</label>
+                <div class="form-control form-control-lg bg-light">
+                  {{ old('description', $stock->product->description) }}
                 </div>
+                <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
+              </div>
 
-                <div class="d-grid gap-2">
-                  <button type="submit" class="btn btn-success fw-semibold">
-                    Save
-                  </button>
-                  <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
-                    Cancel
-                  </a>
-                </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-success fw-semibold">
+                  Save
+                </button>
+                <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
+                  Cancel
+                </a>
+              </div>
 
             </form>
           </div>
