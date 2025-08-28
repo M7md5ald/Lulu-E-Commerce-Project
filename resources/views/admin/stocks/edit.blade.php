@@ -17,7 +17,7 @@
               <div class="mb-3">
                 <label class="form-label fw-semibold">Name</label>
                 <div class="form-control form-control-lg bg-light">
-                  ${{ old('name', $stock->product->name) }}
+                  {{ old('name', $stock->product->name) }}
                 </div>
                 <input type="hidden" name="name" value="{{ old('name', $stock->product->name) }}">
               </div>
@@ -42,40 +42,43 @@
 
               <div class="mb-3">
                 <label for="category_id" class="form-label fw-semibold">Category</label>
+                <div class="form-control form-control-lg bg-light">
                   @foreach($categories as $category)
                   <option value="{{ $category->id }}">
-                    {{ $stock->product->category_id == $category->id ? 'selected' : '' }}
+                    @if ($stock->product->category_id == $category->id)
                     {{ $category->name }}
+                    @endif
                   </option>
                   @endforeach
-              </div>
+                </div>
+                </div>
 
-              <div class="mb-3">
-                <label for="image" class="form-label fw-semibold">Product Image</label>
+                <div class="mb-3">
+                  <label for="image" class="form-label fw-semibold">Product Image</label>
                   @if ($stock->product->image)
-                <div class="mt-2">
-                  <img src="{{ asset('storage/' . $product->image) }}" alt="Current Image"
-                    class="img-thumbnail" width="100">
+                  <div class="mt-2">
+                    <img src="{{ asset('storage/' . $stock->product->image) }}" alt="Current Image"
+                      class="img-thumbnail" width="100">
+                  </div>
+                  @endif
                 </div>
-                @endif
-              </div>
 
-              <div class="mb-3">
-                <label class="form-label fw-semibold">Description</label>
-                <div class="form-control form-control-lg bg-light">
-                  ${{ old('description', $stock->product->description) }}
+                <div class="mb-3">
+                  <label class="form-label fw-semibold">Description</label>
+                  <div class="form-control form-control-lg bg-light">
+                    ${{ old('description', $stock->product->description) }}
+                  </div>
+                  <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
                 </div>
-                <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
-              </div>
 
-              <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-success fw-semibold">
-                  Save
-                </button>
-                <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
-                  Cancel
-                </a>
-              </div>
+                <div class="d-grid gap-2">
+                  <button type="submit" class="btn btn-success fw-semibold">
+                    Save
+                  </button>
+                  <a href="{{ route('stocks.view') }}" class="btn btn-secondary fw-semibold">
+                    Cancel
+                  </a>
+                </div>
 
             </form>
           </div>
