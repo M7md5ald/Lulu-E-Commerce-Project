@@ -51,15 +51,11 @@
       </li>
 
       <li>
-        <a href="javascript:;" class="has-arrow">
+        <a href="{{route('stocks.view')}}">
           <div class="parent-icon"><i class="material-icons-outlined">shopping_bag</i>
           </div>
           <div class="menu-title">Stocks Managment</div>
         </a>
-        <ul>
-          <li><a href="{{route('stocks.view')}}"><i class="material-icons-outlined">arrow_right</i>View</a>
-          </li>
-        </ul>
       </li>
       <li>
         <a class="has-arrow" href="javascript:;">
