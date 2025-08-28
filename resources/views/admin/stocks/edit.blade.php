@@ -66,7 +66,7 @@
                 <div class="mb-3">
                   <label class="form-label fw-semibold">Description</label>
                   <div class="form-control form-control-lg bg-light">
-                    ${{ old('description', $stock->product->description) }}
+                    {{ old('description', $stock->product->description) }}
                   </div>
                   <input type="hidden" name="description" value="{{ old('description', $stock->product->description) }}">
                 </div>
