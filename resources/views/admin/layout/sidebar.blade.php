@@ -15,17 +15,10 @@
     <!--navigation-->
     <ul class="metismenu" id="sidenav">
       <li>
-        <a href="javascript:;" class="has-arrow">
-          <div class="parent-icon"><i class="material-icons-outlined">home</i>
-          </div>
-          <div class="menu-title">Dashboard</div>
+        <a href="{{route('admin.dashboard')}}" class="dashboard-button">
+          <div class="button-icon"><i class="material-icons-outlined">home</i></div>
+          <div class="button-text">Dashboard</div>
         </a>
-        <ul>
-          <li><a href="index.html"><i class="material-icons-outlined">arrow_right</i>eCommerce</a>
-          </li>
-          <li><a href="index2.html"><i class="material-icons-outlined">arrow_right</i>Alternate</a>
-          </li>
-        </ul>
       </li>
       <li>
         <a href="javascript:;" class="has-arrow">
