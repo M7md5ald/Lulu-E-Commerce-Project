@@ -42,7 +42,7 @@
         @include('user.layout.header')
         <!-- /Header -->
 
-        @yield('user_content')
+        @yield('content')
 
         <!-- Footer -->
         @include('user.layout.footer')

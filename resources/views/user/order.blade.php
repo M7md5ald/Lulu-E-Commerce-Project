@@ -1,5 +1,5 @@
 @extends('user.layout.index')
-@section('user_content')
+@section('content')
 
 <div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px;">
   <div class="container">
@@ -118,11 +118,11 @@
 
 {{-- JavaScript --}}
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
+  document.addEventListener('DOMContentLoaded', function() {
     const methodSelect = document.getElementById('payment_method');
     const options = document.querySelectorAll('.payment-option');
 
-    methodSelect.addEventListener('change', function () {
+    methodSelect.addEventListener('change', function() {
       options.forEach(opt => opt.classList.add('d-none'));
       if (this.value) {
         document.getElementById(this.value + '_fields').classList.remove('d-none');
