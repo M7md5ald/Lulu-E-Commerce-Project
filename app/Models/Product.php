@@ -2,15 +2,18 @@
 
 namespace App\Models;
 
+use App\Models\Cart;
 use App\Models\Order;
 use App\Models\Stock;
+use App\Models\CartItem;
 use App\Models\Category;
+use App\Models\Order_Item;
 use App\Models\Wishlist_Item;
 use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
-    protected $fillable = ['name', 'description', 'price', 'image', 'category_id'];
+    protected $fillable = ['name', 'description', 'price', 'image', 'category_id', 'stock_id'];
 
     public function category(){
         return $this->belongsto(Category::class);
@@ -25,7 +28,7 @@ class Product extends Model
     }
 
     public function cart_items(){
-        return $this->hasMany(cart_Item::class);
+        return $this->hasMany(cartItem::class);
     }
 
     public function wishlist_items(){

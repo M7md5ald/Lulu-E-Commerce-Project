@@ -1,7 +1,7 @@
 @extends('user.layout.index')
-@section('user_content')
+@section('content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px">
+<div class="page-wrapper py-5" style="background-color: #f8f9fa; padding-top: 150px">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
@@ -10,15 +10,12 @@
                         Product Details
                     </div>
                     <div class="card-body">
-                        {{ @dd($product, $category) }}
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Name</label>
                             <div class="form-control form-control-lg bg-light">
                                 {{ $product->name }}
                             </div>
                         </div>
-
-
 
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Price</label>
