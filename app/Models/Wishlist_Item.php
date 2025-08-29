@@ -12,6 +12,11 @@ class Wishlist_Item extends Model
         return $this->belongsto(Product::class);
     }
 
+    public function wishlist()
+{
+    return $this->belongsTo(Wishlist::class);
+}
+
     public function cart(){
         return $this->belongsto(Cart::class);
     }

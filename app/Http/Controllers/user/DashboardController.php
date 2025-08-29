@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\user;
 
-use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class DashboardController extends Controller
 {
     public function index(){
-        return view('user.dashboard');
+        $products = Product::all();
+        return view('user.dashboard', compact('products'));
     }
 }

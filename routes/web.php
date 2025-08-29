@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
+use App\Http\Controllers\admin\WishlistController;
+use App\Http\Controllers\admin\WishlistItemController;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,3 +58,10 @@ Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::cl
 
 //order
 Route::get('/user/order', [App\Http\Controllers\user\OrderController::class, 'order'])->name('user.order');
+
+//wishlist
+
+Route::get('/admin/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+
+Route::post('/admin/wishlist/add', [WishlistItemController::class, 'add'])->name('wishlist.add');
+Route::delete('/admin/wishlist/remove/{id}', [WishlistItemController::class, 'remove'])->name('wishlist.remove');

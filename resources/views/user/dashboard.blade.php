@@ -292,11 +292,15 @@
                             <span class="icon icon-bag"></span>
                             <span class="tooltip">Quick Add</span>
                         </a>
-                        <a href="javascript:void(0);" class="box-icon bg_white wishlist btn-icon-action">
-                            <span class="icon icon-heart"></span>
-                            <span class="tooltip">Add to Wishlist</span>
-                            <span class="icon icon-delete"></span>
-                        </a>
+                        <form action="{{ route('wishlist.add') }}" method="POST" style="display:inline;">
+    @csrf
+    <input type="hidden" name="product_id" value="1"> {{-- change 1 to an existing product ID --}}
+    <a href="javascript:void(0);" onclick="this.closest('form').submit();" 
+       class="box-icon bg_white wishlist btn-icon-action">
+        <span class="icon icon-heart"></span>
+        <span class="tooltip">Add to Wishlist</span>
+    </a>
+</form>
                         <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft"
                             class="box-icon bg_white compare btn-icon-action">
                             <span class="icon icon-compare"></span>
