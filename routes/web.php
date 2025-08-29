@@ -70,4 +70,4 @@ Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::cl
 //order
 Route::get('/user/order', [App\Http\Controllers\user\OrderController::class, 'order'])->name('user.order');
 
-Route::get('/user/product/details/{id}'. [App\Http\Controllers\user\DashboardController::class, 'productDetails'])->name('user.product.details');
+Route::get('/user/product/details/{id}', [App\Http\Controllers\user\DashboardController::class, 'productDetails'])->name('user.product.details');
