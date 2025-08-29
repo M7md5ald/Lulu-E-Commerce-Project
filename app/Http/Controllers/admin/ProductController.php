@@ -25,8 +25,7 @@ class ProductController extends Controller
             'name' => 'required|string|max:255',
             'description' => 'required|string',
             'price' => 'required|numeric',
-            //'quantity'=>'required|integer',
-            'image' => 'required|',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'category_id' => 'required|string|max:255',
         ]);
 
@@ -35,17 +34,20 @@ class ProductController extends Controller
             $imagePath = $request->file('image')->store('products', 'public');
         }
 
+        $stock = new Stock();
+        $stock->product_id = 0;
+        $stock->save();
         $product = Product::create([
             'name' => $request->name,
             'description' => $request->description,
             'price' => $request->price,
-            //'quantity'=>$request->quantity,
             'image' => $imagePath,
             'category_id' => $request->category_id,
+            'stock_id' => $stock->id,
         ]);
-        Stock::create([
-            'product_id' => $product->id
-        ]);
+        $stock->product_id = $product->id;
+        $stock->save();
+
         return redirect()->route('products.create')->with('success', 'Product added successfully');
     }
 
@@ -57,8 +59,10 @@ class ProductController extends Controller
 
     public function deleteProducts($id)
     {
-        $products = Product::findOrFail($id);
-        $products->delete();
+        $product = Product::findOrFail($id);
+        $stock = Stock::findOrFail($product->stock_id);
+        $product->delete();
+        $stock->delete();
         return redirect()->route('products.view')->with('success', 'Product deleted successfully');
     }
 
