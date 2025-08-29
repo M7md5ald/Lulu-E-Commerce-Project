@@ -276,7 +276,7 @@
         </div>
         <div class="grid-layout loadmore-item wow fadeInUp" data-wow-delay="0s" data-grid="grid-4">
             <!-- card product 1 -->
-            <div class="card-product fl-item">
+            <!-- <div class="card-product fl-item">
                 <div class="card-product-wrapper">
                     <a href="product-detail.html" class="product-img">
                         <img class="lazyload img-product"
@@ -346,7 +346,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </div> -->
             <!-- card product 2 -->
             @foreach($showProducts as $product)
             <div class="card-product fl-item">
@@ -378,7 +378,7 @@
                     </div>
                 </div>
                 <div class="card-product-info">
-                    <a href="{{route('user.product.details', $product->id)}}" class="title link">Ribbed modal T-shirt</a>
+                    <a href="{{route('user.product.details', $product->id)}}" class="title link">{{$product->name}}</a>
                     <span class="price">From ${{$product->price}}</span>
                 </div>
             </div>
