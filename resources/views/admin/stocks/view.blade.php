@@ -30,7 +30,7 @@
                             <tr>
                                 <td>{{ $stock->product_id }}</td>
                                 <td>{{ $stock->product->name }}</td>
-                                <td>{{ number_format($stock->product->price, 2) }}</td>
+                                <td>${{ number_format($stock->product->price, 2) }}</td>
                                 <td>{{ $stock->product->category->name ?? '—' }}</td>
                                 <td>
                                     @if ($stock->product->image)
@@ -42,7 +42,7 @@
                                 </td>
                                 <td>{{ $stock->quantity }}</td>
                                 <td>
-                                    <a href="{{ route('stocks.edit', $stock) }}" class="btn btn-primary">Edit</a>
+                                    <a href="{{ route('stocks.edit', $stock->id) }}" class="btn btn-primary">Edit</a>
                                 </td>
                             </tr>
                             @empty

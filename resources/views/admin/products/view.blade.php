@@ -19,6 +19,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Name</th>
+                                <th>Description</th>
                                 <th>Price</th>
                                 <!-- <th>Quantity</th> -->
                                 <th>Category</th>
@@ -31,8 +32,9 @@
                             <tr>
                                 <td>{{ $product->id }}</td>
                                 <td>{{ $product->name }}</td>
+                                <td>{{ $product->description }}</td>
                                 <td>${{ number_format($product->price, 2) }}</td>
-                                <td>{{ $product->quantity }}</td>
+                                <!-- <td>{{ $product->quantity }}</td> -->
                                 <td>{{ $product->category->name ?? '—' }}</td>
                                 <td>
                                     @if ($product->image)
