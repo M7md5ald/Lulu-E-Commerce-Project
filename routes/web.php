@@ -69,5 +69,7 @@ Route::get('/user/dashboard', [App\Http\Controllers\user\DashboardController::cl
 
 //order
 Route::get('/user/order', [App\Http\Controllers\user\OrderController::class, 'order'])->name('user.order');
+
 Route::post('/order/store', [App\Http\Controllers\user\OrderController::class, 'store'])->name('order.store');
+
 Route::get('/user/product/details/{id}', [App\Http\Controllers\user\DashboardController::class, 'productDetails'])->name('user.product.details');

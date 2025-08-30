@@ -1,7 +1,7 @@
 @extends('user.layout.index')
-@section('user_content')
+@section('content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px">
+<div class="page-wrapper py-5" style="background-color: #f8f9fa; padding-top: 150px">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
@@ -16,8 +16,6 @@
                                 {{ $product->name }}
                             </div>
                         </div>
-
-
 
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Price</label>
@@ -48,6 +46,13 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label fw-semibold">Stock Left</label>
+                            <div class="form-control form-control-lg bg-light">
+                                {{ $quantity }} left
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label fw-semibold">Description</label>
                             <div class="form-control form-control-lg bg-light" style="min-height: 100px;">
                                 {{ $product->description ?? 'No description available' }}
@@ -55,6 +60,9 @@
                         </div>
 
                         <div class="d-grid gap-2">
+                            <a href="{{ route('user.cart.add', $product->id) }}" class="btn btn-success fw-semibold">
+                                Add to Cart
+                            </a>
                             <a href="{{ route('user.dashboard') }}" class="btn btn-secondary fw-semibold">
                                 Go back
                             </a>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\user;
 
+use App\Models\Stock;
 use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
@@ -17,7 +18,9 @@ class DashboardController extends Controller
     public function productDetails($id){
         $product = Product::findOrFail($id);
         $category = Category::findOrFail($product->category_id);
+        $stock = Stock::find($product->stock_id);
+        $quantity = $stock->quantity;
 
-        return view('user.productDetails', compact('product', 'category'));
+        return view('user.productDetails', compact('product', 'category', 'quantity'));
     }
 }
