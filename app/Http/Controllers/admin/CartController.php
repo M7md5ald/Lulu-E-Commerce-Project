@@ -49,16 +49,20 @@ class CartController extends Controller
                 'price' => Product::find($productId)->price,
             ]);
         }
+    $cartHtml = view('user.cart.show', ['cart' => $cart])->render();
 
-        return redirect()->route('user.cart.show')->with('success', 'Product added to cart!');
-    }
+    return response()->json([
+        'success' => true,
+        'cartHtml' => $cartHtml
+    ]);
+ }
 
     public function removeFromCart($cartItemId)
     {
         $cartItem = CartItem::findOrFail($cartItemId);
         $cartItem->delete();
 
-        return redirect()->route('user.cart.showx')->with('success', 'Item removed from cart.');
+        return redirect()->route('user.cart.show')->with('success', 'Item removed from cart.');
     }
 
     public function checkout()

@@ -11,7 +11,7 @@
           </div>
 
           <div class="card-body">
-            <form action="{{ route('user.order') }}" method="POST">
+            <form action="{{ route('order.store') }}" method="POST">
               @csrf
 
               {{-- Name --}}
