@@ -648,107 +648,60 @@
     <!-- /modal compare -->
 
     <!-- modal quick_add -->
-    <div class="modal fade modalDemo" id="quick_add">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="header">
-                    <span class="icon-close icon-close-popup" data-bs-dismiss="modal"></span>
+   <div class="modal fade" id="quick_add" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-4 rounded-3">
+            
+            <!-- Close Button -->
+            <div class="d-flex justify-content-end">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="row g-4 align-items-center">
+                
+                <!-- Product Image -->
+                <div class="col-md-5 text-center">
+                    <img id="quick-add-image" src="" alt="" class="img-fluid rounded">
                 </div>
-                <div class="wrap">
-                    <div class="tf-product-info-item">
-                        <div class="image">
-                            <img src="{{asset('frontend')}}/assets/images/products/orange-1.jpg" alt="">
-                        </div>
-                        <div class="content">
-                            <a href="product-detail.html">Ribbed Tank Top</a>
-                            <div class="tf-product-info-price">
-                                <!-- <div class="price-on-sale">$8.00</div>
-                                <div class="compare-at-price">$10.00</div>
-                                <div class="badges-on-sale"><span>20</span>% OFF</div> -->
-                                <div class="price">$18.00</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tf-product-info-variant-picker mb_15">
-                        <div class="variant-picker-item">
-                            <div class="variant-picker-label">
-                                Color: <span class="fw-6 variant-picker-label-value">Orange</span>
-                            </div>
-                            <div class="variant-picker-values">
-                                <input id="values-orange" type="radio" name="color" checked>
-                                <label class="hover-tooltip radius-60" for="values-orange" data-value="Orange">
-                                    <span class="btn-checkbox bg-color-orange"></span>
-                                    <span class="tooltip">Orange</span>
-                                </label>
-                                <input id="values-black" type="radio" name="color">
-                                <label class=" hover-tooltip radius-60" for="values-black" data-value="Black">
-                                    <span class="btn-checkbox bg-color-black"></span>
-                                    <span class="tooltip">Black</span>
-                                </label>
-                                <input id="values-white" type="radio" name="color">
-                                <label class="hover-tooltip radius-60" for="values-white" data-value="White">
-                                    <span class="btn-checkbox bg-color-white"></span>
-                                    <span class="tooltip">White</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="variant-picker-item">
-                            <div class="variant-picker-label">
-                                Size: <span class="fw-6 variant-picker-label-value">S</span>
-                            </div>
-                            <div class="variant-picker-values">
-                                <input type="radio" name="size" id="values-s" checked>
-                                <label class="style-text" for="values-s" data-value="S">
-                                    <p>S</p>
-                                </label>
-                                <input type="radio" name="size" id="values-m">
-                                <label class="style-text" for="values-m" data-value="M">
-                                    <p>M</p>
-                                </label>
-                                <input type="radio" name="size" id="values-l">
-                                <label class="style-text" for="values-l" data-value="L">
-                                    <p>L</p>
-                                </label>
-                                <input type="radio" name="size" id="values-xl">
-                                <label class="style-text" for="values-xl" data-value="XL">
-                                    <p>XL</p>
-                                </label>
-                            </div>
+
+                <!-- Product Details -->
+                <div class="col-md-7">
+                    <h4 id="quick-add-name" class="fw-bold mb-2"></h4>
+                    <p id="quick-add-price" class="fs-5 fw-semibold text-dark"></p>
+
+
+                    <!-- Quantity Selector -->
+                    <div class="mb-3">
+                        <label class="fw-semibold d-block mb-1">Quantity:</label>
+                        <div class="input-group" style="width: 120px;">
+                            <button class="btn btn-outline-secondary" type="button" id="quick-add-qty-minus">-</button>
+                            <input type="text" id="quick-add-qty" value="1" class="form-control text-center">
+                            <button class="btn btn-outline-secondary" type="button" id="quick-add-qty-plus">+</button>
                         </div>
                     </div>
-                    <div class="tf-product-info-quantity mb_15">
-                        <div class="quantity-title fw-6">Quantity</div>
-                        <div class="wg-quantity">
-                            <span class="btn-quantity minus-btn">-</span>
-                            <input type="text" name="number" value="1">
-                            <span class="btn-quantity plus-btn">+</span>
-                        </div>
+
+                    <!-- Add to Cart -->
+                    <div class="d-flex align-items-center gap-2 mt-4">
+                    <form id="quick-add-form" action="{{ route('user.cart.add', $product->id ?? 0) }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="quantity" id="quick-add-quantity" value="1">
+                        <button type="submit" class="btn btn-dark flex-grow-1 w-100" 
+                                data-bs-toggle="modal" data-bs-target="#shoppingCart">
+                            Add to Cart - <span id="quick-add-cart-price"></span>
+                        </button>
+                    </form>
                     </div>
-                    <div class="tf-product-info-buy-button">
-                        <form>
-                            <a
-                                class="tf-btn btn-fill justify-content-center fw-6 fs-16 flex-grow-1 animate-hover-btn btn-add-to-cart"><span>Add
-                                    to cart -&nbsp;</span><span class="tf-qty-price">$18.00</span></a>
-                            <div class="tf-product-btn-wishlist btn-icon-action">
-                                <i class="icon-heart"></i>
-                                <i class="icon-delete"></i>
-                            </div>
-                            <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft"
-                                class="tf-product-btn-wishlist box-icon bg_white compare btn-icon-action">
-                                <span class="icon icon-compare"></span>
-                                <span class="icon icon-check"></span>
-                            </a>
-                            <div class="w-100">
-                                <a href="#" class="btns-full">Buy with <img
-                                        src="{{asset('frontend')}}/assets/images/payments/paypal.png" alt=""></a>
-                                <a href="#" class="payment-more-option">More payment options</a>
-                            </div>
-                        </form>
-                    </div>
+
+
+
+
                 </div>
+
             </div>
         </div>
     </div>
+</div>
+
     <!-- /modal quick_add -->
 
     <!-- modal quick_view -->
@@ -998,6 +951,48 @@
     <script type="text/javascript" src="{{asset('frontend')}}/assets/js/wow.min.js"></script>
     <script type="text/javascript" src="{{asset('frontend')}}/assets/js/multiple-modal.js"></script>
     <script type="text/javascript" src="{{asset('frontend')}}/assets/js/main.js"></script>
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    var quickAddModal = document.getElementById('quick_add');
+
+    quickAddModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+
+        // Get product data
+        var id = button.getAttribute('data-id');
+        var name = button.getAttribute('data-name');
+        var price = button.getAttribute('data-price');
+        var image = button.getAttribute('data-image');
+
+        // Fill modal
+        document.getElementById('quick-add-name').textContent = name;
+        document.getElementById('quick-add-price').textContent = '$' + price;
+        document.getElementById('quick-add-image').src = image;
+        document.getElementById('quick-add-cart-price').textContent = '$' + price;
+
+        // Reset quantity
+        document.getElementById('quick-add-qty').value = 1;
+
+        // (Optional) If you have product variants (colors, sizes), fetch via AJAX
+        // Example: /products/{id}/variants and update #quick-add-colors / #quick-add-sizes
+    });
+
+    // Quantity buttons
+    document.getElementById('quick-add-qty-minus').addEventListener('click', function () {
+        let qty = document.getElementById('quick-add-qty');
+        if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
+    });
+    document.getElementById('quick-add-qty-plus').addEventListener('click', function () {
+        let qty = document.getElementById('quick-add-qty');
+        qty.value = parseInt(qty.value) + 1;
+    });
+});
+</script>
+
+
+
 </body>
 
 
