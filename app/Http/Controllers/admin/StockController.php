@@ -32,6 +32,10 @@ class StockController extends Controller
     {
         $stock = Stock::findOrFail($id);
 
+        $request->validate([
+            'quantity' => 'required|integer|min:0'
+        ]);
+
         $stock->update([
             'quantity' => $request->quantity
         ]);

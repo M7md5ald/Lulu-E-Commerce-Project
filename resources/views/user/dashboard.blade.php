@@ -275,6 +275,7 @@
                 curve with our newest arrivals</p>
         </div>
         <div class="grid-layout loadmore-item wow fadeInUp" data-wow-delay="0s" data-grid="grid-4">
+
                     <!-- card product 1 -->
                     <div class="card-product fl-item">
                         <div class="card-product-wrapper">
@@ -334,6 +335,7 @@
                     <!-- card product 2 -->
             @foreach($showProducts as $product)
             <div class="card-product fl-item">
+
                 <div class="card-product-wrapper">
                     <a href="{{route('user.cart.add', $product->id)}}" class="product-img">
                         <div class="img-box">
@@ -470,7 +472,7 @@
                                             <ul class="dropdown-menu p-0 border-0">
                                                 <li>
                                                     <div class="lookbook-product">
-                                                        <a href="product-detail.html" class="image">
+                                                        <a href="user.product.details" class="image">
                                                             <img class="lazyload"
                                                                 data-src="{{asset('frontend')}}/assets/images/shop/products/img-p4.png"
                                                                 src="{{asset('frontend')}}/assets/images/shop/products/img-p4.png"
@@ -478,7 +480,7 @@
                                                         </a>
                                                         <div class="content-wrap">
                                                             <div class="product-title">
-                                                                <a href="#">Ribbed modal T-shirt</a>
+                                                                <a href="user.product.details">Ribbed modal T-shirt</a>
                                                             </div>
                                                             <div class="price">$20.00</div>
                                                         </div>
@@ -509,7 +511,7 @@
                                             <ul class="dropdown-menu p-0 border-0">
                                                 <li>
                                                     <div class="lookbook-product">
-                                                        <a href="product-detail.html" class="image">
+                                                        <a href="user.product.details" class="image">
                                                             <img class="lazyload"
                                                                 data-src="{{asset('frontend')}}/assets/images/shop/products/img-p5.png"
                                                                 src="{{asset('frontend')}}/assets/images/shop/products/img-p5.png"
@@ -517,7 +519,7 @@
                                                         </a>
                                                         <div class="content-wrap">
                                                             <div class="product-title">
-                                                                <a href="#">Ribbed Tank Top</a>
+                                                                <a href="user.product.details">Ribbed Tank Top</a>
                                                             </div>
                                                             <div class="price">$20.00</div>
                                                         </div>
