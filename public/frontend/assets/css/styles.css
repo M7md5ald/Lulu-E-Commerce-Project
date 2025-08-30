@@ -18666,6 +18666,28 @@ blockquote .text {
   .banner-countdown-v2 .tf-countdown .countdown__timer {
     justify-content: start;
   }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card-product .img-box {
+    width: 100%;
+    height: 200px; /* fixed height */
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.product-img-inner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* maintain aspect ratio & crop */
+    display: block;
+}
+
+
 }
 
 /*# sourceMappingURL=styles.css.map */

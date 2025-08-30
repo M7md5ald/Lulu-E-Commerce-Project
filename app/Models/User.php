@@ -31,17 +31,21 @@ class User extends Authenticatable
     }
 
     public function cart(){
-        return $this->belongsto(Cart::class);
+        return $this->hasOne(Cart::class);
     }
 
     public function wishlist(){
-        return $this->belongsto(Wishlist::class);
+        return $this->hasOne(Wishlist::class);
     }
 
     public function coupons(){
         return $this->hasMany(Coupon::class);
     }
 
+    public function currentCart($value)
+{
+    return $this->cart()->firstOrCreate([]);
+}
 
     /**
      * The attributes that should be hidden for serialization.
