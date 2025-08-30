@@ -275,139 +275,55 @@
                 curve with our newest arrivals</p>
         </div>
         <div class="grid-layout loadmore-item wow fadeInUp" data-wow-delay="0s" data-grid="grid-4">
-                    <!-- card product 1 -->
-                    <div class="card-product fl-item">
-                        <div class="card-product-wrapper">
-                            <a href="product-detail.html" class="product-img">
-                                <img class="lazyload img-product" data-src="images/products/orange-1.jpg" src="images/products/orange-1.jpg" alt="image-product">
-                                <img class="lazyload img-hover" data-src="images/products/white-1.jpg" src="images/products/white-1.jpg" alt="image-product">
-                            </a>
-                            <div class="list-product-btn">
-                                <a href="#quick_add" data-bs-toggle="modal" class="box-icon bg_white quick-add tf-btn-loading">
-                                    <span class="icon icon-bag"></span>
-                                    <span class="tooltip">Quick Add</span>
-                                </a>
-                                <a href="javascript:void(0);" class="box-icon bg_white wishlist btn-icon-action">
-                                    <span class="icon icon-heart"></span>
-                                    <span class="tooltip">Add to Wishlist</span>
-                                    <span class="icon icon-delete"></span>
-                                </a>
-                                <a href="#compare" data-bs-toggle="offcanvas" aria-controls="offcanvasLeft" class="box-icon bg_white compare btn-icon-action">
-                                    <span class="icon icon-compare"></span>
-                                    <span class="tooltip">Add to Compare</span>
-                                    <span class="icon icon-check"></span>
-                                </a>
-                                <a href="#quick_view" data-bs-toggle="modal" class="box-icon bg_white quickview tf-btn-loading">
-                                    <span class="icon icon-view"></span>
-                                    <span class="tooltip">Quick View</span>
-                                </a>
-                            </div>
-                            <div class="size-list">
-                                <span>S</span>
-                                <span>M</span>
-                                <span>L</span>
-                                <span>XL</span>
-                            </div>
-                        </div>
-                        <div class="card-product-info">
-                            <a href="product-detail.html" class="title link">Ribbed Tank Top</a>
-                            <span class="price">$16.95</span>
-                            <ul class="list-color-product">
-                                <li class="list-color-item color-swatch active">
-                                    <span class="tooltip">Orange</span>
-                                    <span class="swatch-value bg_orange-3"></span>
-                                    <img class="lazyload" data-src="images/products/orange-1.jpg" src="images/products/orange-1.jpg" alt="image-product">
-                                </li>
-                                <li class="list-color-item color-swatch">
-                                    <span class="tooltip">Black</span>
-                                    <span class="swatch-value bg_dark"></span>
-                                    <img class="lazyload" data-src="images/products/black-1.jpg" src="images/products/black-1.jpg" alt="image-product">
-                                </li>
-                                <li class="list-color-item color-swatch">
-                                    <span class="tooltip">White</span>
-                                    <span class="swatch-value bg_white"></span>
-                                    <img class="lazyload" data-src="images/products/white-1.jpg" src="images/products/white-1.jpg" alt="image-product">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    
                     <!-- card product 2 -->
-            @foreach($showProducts as $product)
-            <div class="card-product fl-item">
-                <div class="card-product-wrapper">
-                    <a href="{{route('user.cart.add', $product->id)}}" class="product-img">
-                        <div class="img-box">
-                            <img src="{{asset('storage/'.$product->image)}}" alt="">
-                        </div>
+            <div class="products-container">
+    @foreach($showProducts as $product)
+        <div class="card-product fl-item">
+            <div class="card-product-wrapper">
+
+                <!-- Product Image -->
+                <a href="{{ route('user.product.details', $product->id) }}" class="product-img">
+                    <div class="img-box">
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="product-img-inner">
+                    </div>
+                </a>
+
+                <!-- Product Buttons -->
+                <div class="list-product-btn">
+                    <a href="javascript:void(0);" 
+                       data-bs-toggle="modal" 
+                       data-bs-target="#quick_add"
+                       data-id="{{ $product->id }}"
+                       data-name="{{ $product->name }}"
+                       data-price="{{ $product->price }}"
+                       data-image="{{ asset('storage/' . $product->image) }}"
+                       class="box-icon bg_white quick-add tf-btn-loading">
+                        <span class="icon icon-bag"></span>
+                        <span class="tooltip">Quick Add</span>
                     </a>
-                    <div class="list-product-btn">
 
                     
-                        <a href="javascript:void(0);" 
-                            data-bs-toggle="modal" 
-                            data-bs-target="#quick_add"
-                            data-id="{{ $product->id }}"
-                            data-name="{{ $product->name }}"
-                            data-price="{{ $product->price }}"
-                            data-image="{{ asset('storage/' . $product->image) }}"
-                            class="box-icon bg_white quick-add tf-btn-loading">
-                            <span class="icon icon-bag"></span>
-                            <span class="tooltip">Quick Add</span>
-                        </a>
-
-
-
-                        
-                         <a href="route('user.wishlist.add', 'product->id')" class="box-icon bg_white wishlist btn-icon-action">
-                            <span class="icon icon-heart"></span>
-                            <span class="tooltip">Add to Wishlist</span>
-                            <span class="icon icon-delete"></span>
-                        </a>
-                    </div>
-                    <div class="size-list">
-                        <span>S</span>
-                        <span>M</span>
-                        <span>L</span>
-                        <span>XL</span>
-                    </div>
-                    
-                    <div class="card-product-info">
-                        <a href="{{route('user.cart.add', $product->id)}}" class="title link">{{$product->name}}</a>
-                        <span class="price">From ${{$product->price}}</span>
-                    </div>
                 </div>
 
-                <!-- <div class="card-product-info">
-                    <a href="product-detail.html" class="title link">Example left to improve the rest</a>
-                    <span class="price">$16.95</span>
-                    <ul class="list-color-product">
-                        <li class="list-color-item color-swatch active">
-                            <span class="tooltip">Orange</span>
-                            <span class="swatch-value bg_orange-3"></span>
-                            <img class="lazyload"
-                                data-src="{{asset('frontend')}}/assets/images/products/orange-1.jpg"
-                                src="{{asset('frontend')}}/assets/images/products/orange-1.jpg"
-                                alt="image-product">
-                        </li>
-                        <li class="list-color-item color-swatch">
-                            <span class="tooltip">Black</span>
-                            <span class="swatch-value bg_dark"></span>
-                            <img class="lazyload"
-                                data-src="{{asset('frontend')}}/assets/images/products/black-1.jpg"
-                                src="{{asset('frontend')}}/assets/images/products/black-1.jpg"
-                                alt="image-product">
-                        </li>
-                        <li class="list-color-item color-swatch">
-                            <span class="tooltip">White</span>
-                            <span class="swatch-value bg_white"></span>
-                            <img class="lazyload"
-                                data-src="{{asset('frontend')}}/assets/images/products/white-1.jpg"
-                                src="{{asset('frontend')}}/assets/images/products/white-1.jpg"
-                                alt="image-product">
-                        </li>
-                    </ul>
-                </div> -->
-            @endforeach
+                <!-- Sizes -->
+                <div class="size-list">
+                    <span>S</span>
+                    <span>M</span>
+                    <span>L</span>
+                    <span>XL</span>
+                </div>
+
+                <!-- Product Info -->
+                <div class="card-product-info">
+                    <a href="{{ route('user.cart.add', $product->id) }}" class="title link">{{ $product->name }}</a>
+                    <span class="price">From ${{ $product->price }}</span>
+                </div>
+            </div>
+        </div>
+    @endforeach
+</div>
+
         </div>
                 
         </div>

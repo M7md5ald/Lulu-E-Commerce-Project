@@ -685,8 +685,7 @@
                     <form id="quick-add-form" action="{{ route('user.cart.add', $product->id ?? 0) }}" method="POST">
                         @csrf
                         <input type="hidden" name="quantity" id="quick-add-quantity" value="1">
-                        <button type="submit" class="btn btn-dark flex-grow-1 w-100" 
-                                data-bs-toggle="modal" data-bs-target="#shoppingCart">
+                        <button type="submit" class="btn btn-dark flex-grow-1 w-100" >
                             Add to Cart - <span id="quick-add-cart-price"></span>
                         </button>
                     </form>
@@ -991,7 +990,36 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+<script>
+document.getElementById('quick-add-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop page refresh
 
+    let form = this;
+    let formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        headers: {
+            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+        },
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            // Inject partial HTML into modal
+            document.getElementById('shoppingCartContent').innerHTML = data.cartHtml;
+
+            // Open the modal
+            let modal = new bootstrap.Modal(document.getElementById('shoppingCart'));
+            modal.show();
+        } else {
+            alert(data.message || 'Something went wrong');
+        }
+    })
+    .catch(err => console.error(err));
+});
+</script>
 
 </body>
 

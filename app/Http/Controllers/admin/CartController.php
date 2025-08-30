@@ -11,63 +11,86 @@ use Illuminate\Support\Facades\Auth;
 
 class CartController extends Controller
 {
+    // Show cart items
     public function showCart()
     {
-        // Get the user's cart
-        $cart = Cart::firstOrCreate(['user_id' => Auth::user()->id]);
+        $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Please login first.');
+        }
 
-        // Get all items with product relation
+        $cart = Cart::firstOrCreate(['user_id' => $user->id]);
+
         $cartItems = $cart->cart_items()->with('product')->get();
 
-        // Calculate total price
         $totalPrice = $cartItems->sum(function ($item) {
             return $item->price * $item->quantity;
         });
 
-        // Pass both cartItems and totalPrice to the view
         return view('user.cart.show', compact('cartItems', 'totalPrice'));
     }
 
+    // Add product to cart
     public function addToCart(Request $request, $productId)
     {
-        $cart = Cart::firstOrCreate(['user_id' => Auth::user()->id]);
+        $user = Auth::user();
+        if (!$user) {
+            return response()->json(['success' => false, 'message' => 'Please login first.']);
+        }
+
+        $cart = Cart::firstOrCreate(['user_id' => $user->id]);
 
         $cartItem = CartItem::where('cart_id', $cart->id)
             ->where('product_id', $productId)
             ->first();
 
         if ($cartItem) {
-            // If product exists in cart, increase quantity
             $cartItem->quantity += $request->input('quantity', 1);
             $cartItem->save();
         } else {
-            // Otherwise, create a new cart item
+            $product = Product::find($productId);
+            if (!$product) {
+                return response()->json(['success' => false, 'message' => 'Product not found.']);
+            }
+
             CartItem::create([
                 'cart_id' => $cart->id,
                 'product_id' => $productId,
                 'quantity' => $request->input('quantity', 1),
-                'price' => Product::find($productId)->price,
+                'price' => $product->price,
             ]);
         }
-    $cartHtml = view('user.cart.show', ['cart' => $cart])->render();
 
-    return response()->json([
-        'success' => true,
-        'cartHtml' => $cartHtml
-    ]);
- }
+        $cartItems = $cart->cart_items()->with('product')->get();
+        $totalPrice = $cartItems->sum(fn($item) => $item->price * $item->quantity);
 
+        $cartHtml = view('user.cart.cart_details', compact('cartItems', 'totalPrice'))->render();
+
+        return response()->json([
+            'success' => true,
+            'cartHtml' => $cartHtml
+        ]);
+    }
+
+    // Remove item from cart
     public function removeFromCart($cartItemId)
     {
-        $cartItem = CartItem::findOrFail($cartItemId);
-        $cartItem->delete();
+        $cartItem = CartItem::find($cartItemId);
+        if ($cartItem) {
+            $cartItem->delete();
+        }
 
         return redirect()->route('user.cart.show')->with('success', 'Item removed from cart.');
     }
 
+    // Checkout page
     public function checkout()
     {
-        // Handle checkout logic, e.g., payment and order creation
+        $user = Auth::user();
+        if (!$user) {
+            return redirect()->route('login')->with('error', 'Please login first.');
+        }
+
         return view('user.cart.checkout');
     }
 }

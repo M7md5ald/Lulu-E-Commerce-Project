@@ -10,7 +10,6 @@
                         Product Details
                     </div>
                     <div class="card-body">
-                        {{ @dd($product, $category) }}
                         <div class="mb-3">
                             <label class="form-label fw-semibold">Name</label>
                             <div class="form-control form-control-lg bg-light">
