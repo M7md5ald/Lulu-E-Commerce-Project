@@ -19,8 +19,8 @@ return new class extends Migration
             $table->decimal('total_amount', 8, 2);
             $table->enum('status',['pending', 'paid', 'cancelled'])->default('pending');
             $table->foreignId('user_id')->onDelete('cascade');
-            $table->foreignId('payment_id')->onDelete('cascade');
-            $table->foreignId('coupon_id')->onDelete('cascade');  
+            $table->foreignId('payment_id')->nullable()->constrained()->onDelete('cascade');
+            $table->foreignId('coupon_id')->nullable()->constrained()->onDelete('cascade');  
             $table->timestamps();
         });
     }

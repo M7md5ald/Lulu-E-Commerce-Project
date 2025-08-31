@@ -14,26 +14,30 @@
             <form action="{{ route('order.store') }}" method="POST">
               @csrf
 
-              {{-- Name --}}
-              <div class="mb-3">
-                <label for="name" class="form-label fw-semibold">Name</label>
-                <input type="text" name="name" class="form-control form-control-lg"
-                  value="{{ old('name', auth()->user()->name ?? '') }}" required>
-              </div>
+                {{-- Name --}}
+                <div class="mb-3">
+                  <label for="current_name" class="form-label fw-semibold">Name</label>
+                  <input type="text" name="current_name" class="form-control form-control-lg"
+                    value="{{ old('current_name', auth()->user()->name ?? '') }}" required>
+                </div>
 
-              {{-- Email --}}
-              <div class="mb-3">
-                <label for="email" class="form-label fw-semibold">E-mail</label>
-                <input type="email" name="email" class="form-control form-control-lg"
-                  value="{{ old('email', auth()->user()->email ?? '') }}" required>
-              </div>
+                {{-- Email --}}
+                <div class="mb-3">
+                  <label for="current_email" class="form-label fw-semibold">E-mail</label>
+                  <input type="email" name="current_email" class="form-control form-control-lg"
+                    value="{{ old('current_email', auth()->user()->email ?? '') }}" required>
+                </div>
 
-              {{-- Phone --}}
-              <div class="mb-3">
-                <label for="phone_number" class="form-label fw-semibold">Phone Number</label>
-                <input type="text" name="phone_number" class="form-control form-control-lg"
-                  value="{{ old('phone_number', auth()->user()->phone_number ?? '') }}" required>
-              </div>
+                {{-- Phone --}}
+                <div class="mb-3">
+                  <label for="current_phone_number" class="form-label fw-semibold">Phone Number</label>
+                  <input type="text" name="current_phone_number" class="form-control form-control-lg"
+                    value="{{ old('current_phone_number', auth()->user()->phone_number ?? '') }}" required>
+                </div>
+
+                  {{-- total price --}}
+                <input type="hidden" name="total_price" value="{{ $totalPrice }}">
+
 
               {{-- Payment Method --}}
               <div class="mb-3">

@@ -276,7 +276,7 @@
         </div>
         <div class="grid-layout loadmore-item wow fadeInUp" data-wow-delay="0s" data-grid="grid-4">
                     
-                    <!-- card product 2 -->
+                    <!-- card product -->
             <div class="products-container">
     @foreach($showProducts as $product)
         <div class="card-product fl-item">
@@ -302,9 +302,6 @@
                         <span class="icon icon-bag"></span>
                         <span class="tooltip">Quick Add</span>
                     </a>
-
-
-                    
                 </div>
 
                 <!-- Sizes -->
@@ -317,13 +314,15 @@
 
                 <!-- Product Info -->
                 <div class="card-product-info">
-                    <a href="{{ route('user.cart.add', $product->id) }}" class="title link">{{ $product->name }}</a>
+                    <a href="{{ route('user.product.details', $product->id) }}" class="title link">{{ $product->name }}</a>
                     <span class="price">From ${{ $product->price }}</span>
                 </div>
             </div>
         </div>
     @endforeach
 </div>
+
+
 
         </div>
 

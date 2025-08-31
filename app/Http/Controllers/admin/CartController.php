@@ -91,6 +91,11 @@ class CartController extends Controller
             return redirect()->route('login')->with('error', 'Please login first.');
         }
 
-        return view('user.cart.checkout');
+        $cart = Cart::where('user_id', $user->id)->first();
+        $cartItems = $cart ? $cart->cart_items()->with('product')->get() : collect([]);
+
+        $totalPrice = $cartItems->sum(fn($item) => $item->price * $item->quantity);
+
+        return view('user.cart.checkout', compact('totalPrice'));
     }
 }
