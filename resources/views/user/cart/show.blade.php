@@ -1,7 +1,7 @@
 @extends('user.layout.index')
 
 @section('content')
-<div class="page-wrapper py-5" style="background-color: #f8f9fa;">
+<div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px;">
     <div class="container">
 
         <div class="card shadow-sm border-0 rounded">

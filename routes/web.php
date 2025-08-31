@@ -57,6 +57,7 @@ Route::put('/admin/stocks/{id}', [StockController::class, 'updateStocks'])->name
 
 ######################
 #####    user    #####
+
 // Cart Routes
 Route::get('/user/cart', [CartController::class, 'showCart'])->name('user.cart.show');
 Route::post('/user/cart/add/{productId}', [CartController::class, 'addToCart'])->name('user.cart.add');

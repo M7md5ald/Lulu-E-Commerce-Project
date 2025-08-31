@@ -647,8 +647,8 @@
     </div>
     <!-- /modal compare -->
 
-    <!-- modal quick_add -->
-   <div class="modal fade" id="quick_add" tabindex="-1" aria-hidden="true">
+   <!-- modal quick_add -->
+<div class="modal fade" id="quick_add" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content p-4 rounded-3">
             
@@ -669,11 +669,10 @@
                     <h4 id="quick-add-name" class="fw-bold mb-2"></h4>
                     <p id="quick-add-price" class="fs-5 fw-semibold text-dark"></p>
 
-
                     <!-- Quantity Selector -->
                     <div class="mb-3">
                         <label class="fw-semibold d-block mb-1">Quantity:</label>
-                        <div class="input-group" style="width: 120px;">
+                        <div class="input-group" style="width: 140px;">
                             <button class="btn btn-outline-secondary" type="button" id="quick-add-qty-minus">-</button>
                             <input type="text" id="quick-add-qty" value="1" class="form-control text-center">
                             <button class="btn btn-outline-secondary" type="button" id="quick-add-qty-plus">+</button>
@@ -682,24 +681,21 @@
 
                     <!-- Add to Cart -->
                     <div class="d-flex align-items-center gap-2 mt-4">
-                    <form id="quick-add-form" action="{{ route('user.cart.add', $product->id ?? 0) }}" method="POST">
-                        @csrf
-                        <input type="hidden" name="quantity" id="quick-add-quantity" value="1">
-                        <button type="submit" class="btn btn-dark flex-grow-1 w-100" >
-                            Add to Cart - <span id="quick-add-cart-price"></span>
-                        </button>
-                    </form>
+                        <form id="quick-add-form" action="" method="POST">
+                            @csrf
+                            <input type="hidden" name="quantity" id="quick-add-quantity" value="1">
+                            <button type="submit" class="btn btn-dark flex-grow-1 w-100">
+                                Add to Cart - <span id="quick-add-cart-price"></span>
+                            </button>
+                        </form>
                     </div>
-
-
-
-
                 </div>
 
             </div>
         </div>
     </div>
 </div>
+
 
     <!-- /modal quick_add -->
 
@@ -952,74 +948,82 @@
     <script type="text/javascript" src="{{asset('frontend')}}/assets/js/main.js"></script>
 
 
-    <script>
-document.addEventListener('DOMContentLoaded', function () {
-    var quickAddModal = document.getElementById('quick_add');
-
-    quickAddModal.addEventListener('show.bs.modal', function (event) {
-        var button = event.relatedTarget;
-
-        // Get product data
-        var id = button.getAttribute('data-id');
-        var name = button.getAttribute('data-name');
-        var price = button.getAttribute('data-price');
-        var image = button.getAttribute('data-image');
-
-        // Fill modal
-        document.getElementById('quick-add-name').textContent = name;
-        document.getElementById('quick-add-price').textContent = '$' + price;
-        document.getElementById('quick-add-image').src = image;
-        document.getElementById('quick-add-cart-price').textContent = '$' + price;
-
-        // Reset quantity
-        document.getElementById('quick-add-qty').value = 1;
-
-        // (Optional) If you have product variants (colors, sizes), fetch via AJAX
-        // Example: /products/{id}/variants and update #quick-add-colors / #quick-add-sizes
-    });
-
-    // Quantity buttons
-    document.getElementById('quick-add-qty-minus').addEventListener('click', function () {
-        let qty = document.getElementById('quick-add-qty');
-        if (parseInt(qty.value) > 1) qty.value = parseInt(qty.value) - 1;
-    });
-    document.getElementById('quick-add-qty-plus').addEventListener('click', function () {
-        let qty = document.getElementById('quick-add-qty');
-        qty.value = parseInt(qty.value) + 1;
-    });
-});
-</script>
-
 <script>
-document.getElementById('quick-add-form').addEventListener('submit', function(e) {
-    e.preventDefault(); // Stop page refresh
+document.addEventListener('DOMContentLoaded', function () {
+    const quickAddForm = document.getElementById('quick-add-form');
+    const qtyInput = document.getElementById('quick-add-qty');
+    const qtyHidden = document.getElementById('quick-add-quantity');
 
-    let form = this;
-    let formData = new FormData(form);
+    // Handle Quick Add button clicks
+    document.querySelectorAll('.quick-add').forEach(button => {
+        button.addEventListener('click', function () {
+            const id = this.dataset.id;
+            const name = this.dataset.name;
+            const price = this.dataset.price;
+            const image = this.dataset.image;
 
-    fetch(form.action, {
-        method: 'POST',
-        headers: {
-            'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
-        },
-        body: formData
-    })
-    .then(res => res.json())
-    .then(data => {
-        if (data.success) {
-            // Inject partial HTML into modal
-            document.getElementById('shoppingCartContent').innerHTML = data.cartHtml;
+            // Fill modal with product info
+            document.getElementById('quick-add-name').innerText = name;
+            document.getElementById('quick-add-price').innerText = `$${parseFloat(price).toFixed(2)}`;
+            document.getElementById('quick-add-image').src = image;
+            document.getElementById('quick-add-cart-price').innerText = `$${parseFloat(price).toFixed(2)}`;
 
-            // Open the modal
-            let modal = new bootstrap.Modal(document.getElementById('shoppingCart'));
-            modal.show();
-        } else {
-            alert(data.message || 'Something went wrong');
-        }
-    })
-    .catch(err => console.error(err));
+            // Reset quantity
+            qtyInput.value = 1;
+            qtyHidden.value = 1;
+
+            // Update form action dynamically
+            quickAddForm.action = `/user/cart/add/${id}`;
+        });
+    });
+
+    // Quantity +
+    document.getElementById('quick-add-qty-plus').addEventListener('click', function () {
+        let qty = parseInt(qtyInput.value) || 1;
+        qtyInput.value = qty + 1;
+        qtyHidden.value = qtyInput.value;
+    });
+
+    // Quantity -
+    document.getElementById('quick-add-qty-minus').addEventListener('click', function () {
+        let qty = parseInt(qtyInput.value) || 1;
+        if (qty > 1) qtyInput.value = qty - 1;
+        qtyHidden.value = qtyInput.value;
+    });
+
+    // Sync manual input
+    qtyInput.addEventListener('input', function () {
+        qtyHidden.value = this.value;
+    });
+
+    // Handle Add to Cart (AJAX optional)
+    quickAddForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let formData = new FormData(quickAddForm);
+
+        fetch(quickAddForm.action, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('input[name="_token"]').value
+            },
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.success) {
+                document.getElementById('shoppingCartContent').innerHTML = data.cartHtml;
+                let modal = new bootstrap.Modal(document.getElementById('shoppingCart'));
+                modal.show();
+            } else {
+                alert(data.message || 'Something went wrong');
+            }
+        })
+        .catch(err => console.error(err));
+    });
 });
 </script>
+
 
 </body>
 

@@ -1,7 +1,7 @@
 @extends('user.layout.index')
 @section('content')
 
-<div class="page-wrapper py-5" style="background-color: #f8f9fa; padding-top: 150px">
+<div class="page-wrapper py-5" style="background-color: #f8f9fa; margin-top:80px;">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-7">
