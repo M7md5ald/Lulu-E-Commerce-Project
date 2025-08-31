@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\admin\CartController;
+use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\admin\CartController;
 use App\Http\Controllers\admin\StockController;
 use App\Http\Controllers\admin\ProductController;
 use App\Http\Controllers\admin\CategoryController;
@@ -27,8 +28,8 @@ require __DIR__ . '/auth.php';
 #####    admin    #####
 #######################
 
-
-Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
+Route::middleware(['auth', AdminMiddleware::class])->group(function () {
+    Route::get('/admin/dashboard', [App\Http\Controllers\admin\DashboardController::class, 'index'])->name('admin.dashboard');
 
 //category
 Route::get('/admin/categories/create', [CategoryController::class, 'createCategory'])->name('categories.create');
@@ -53,6 +54,10 @@ Route::get('/admin/order', [App\Http\Controllers\admin\OrderController::class, '
 Route::get('/admin/stocks/view', [StockController::class, 'viewStocks'])->name('stocks.view');
 Route::get('/admin/stocks/{id}/edit', [StockController::class, 'editStocks'])->name('stocks.edit');
 Route::put('/admin/stocks/{id}', [StockController::class, 'updateStocks'])->name('stocks.update');
+
+
+});
+
 
 
 ######################
